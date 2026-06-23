@@ -1,18 +1,20 @@
-:root {
-  --pageWidth: 1150px;       // Делаем центральную часть вики широкой
-  --sidePanelWidth: 300px;   // Делаем боковые панели чуть компактнее
-}
-
-// Защита таблиц от обрезания (добавляет полосу прокрутки внутри таблицы)
+// Заставляем таблицы прокручиваться, а не сжиматься до уродства
 table {
-  display: block;
-  width: 100%;
-  overflow-x: auto;
+  display: block !important;
+  width: 100% !important;
+  overflow-x: auto !important;
   border-collapse: collapse;
 }
 
-// Защита больших картинок (чтобы они не вылезали за границы текста)
+th, td {
+  white-space: nowrap !important; // Запрещает тексту переноситься по одной букве
+  padding: 0.5rem 1.5rem !important; // Делает красивые отступы между ячейками
+}
+
+// Картинки центрируем и не даем им ломать границы
 img {
-  max-width: 100%;
-  height: auto;
-}// put your custom CSS here!
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+  margin: 1.5rem auto !important; // Центрирует картинку в статье
+}
