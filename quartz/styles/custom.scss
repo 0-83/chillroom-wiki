@@ -1,1 +1,18 @@
-// put your custom CSS here!
+:root {
+  --pageWidth: 1150px;       // Делаем центральную часть вики широкой
+  --sidePanelWidth: 300px;   // Делаем боковые панели чуть компактнее
+}
+
+// Защита таблиц от обрезания (добавляет полосу прокрутки внутри таблицы)
+table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+// Защита больших картинок (чтобы они не вылезали за границы текста)
+img {
+  max-width: 100%;
+  height: auto;
+}// put your custom CSS here!
