@@ -1,39 +1,43 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
-// components shared across all pages
+// Компоненты, которые отображаются на ВСЕХ страницах (шапка сайта)
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      GitHub: "https://github.com/0-83/chillroom-wiki",
     },
   }),
 }
 
-// components for pages that display a single page (e.g. a single note)
+// Макет для ОБЫЧНЫХ страниц (твои статьи, правила, донат)
 export const defaultContentPageLayout: PageLayout = {
-  beforeBody: [Component.ArticleTitle(), Component.ContentMeta(), Component.TagList()],
+  beforeBody: [
+    Component.ArticleTitle(), 
+    Component.ContentMeta(), 
+    Component.TagList()
+  ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.TableOfContents()),
+    Component.DesktopOnly(Component.TableOfContents()), // Оглавление статьи слева
   ],
-  right: [Component.Graph(), Component.Backlinks()],
+  right: [], // Правая колонка пустая — граф убран, центральная часть расширилась!
 }
 
-// components for pages that display lists of pages  (e.g. tags or folders)
+// Макет для СТРАНИЦ-СПИСКОВ (страницы папок и тегов)
+// ВАЖНО: Quartz ищет этот блок, возвращаем его на место в чистом виде
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.ArticleTitle()],
+  beforeBody: [Component.ArticleTitle(), Component.ContentMeta()],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
   ],
-  right: [],
+  right: [], // Здесь тоже правая панель пустая
 }
