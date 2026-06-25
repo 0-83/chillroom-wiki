@@ -1,20 +1,34 @@
-// Заставляем таблицы прокручиваться, а не сжиматься до уродства
+// 1. Создаем контейнер, который будет прижимать полосу прокрутки к экрану
+.table-container {
+  overflow-x: auto !important; // Включаем горизонтальную прокрутку
+  position: relative;
+  max-width: 100%;
+  margin: 1.5rem 0 !important;
+}
+
+// 2. Магия: заставляем саму таблицу прокручиваться внутри контейнера
 table {
-  display: block !important;
+  display: table !important; // Возвращаем стандартное отображение таблицы
   width: 100% !important;
-  overflow-x: auto !important;
   border-collapse: collapse;
 }
 
 th, td {
-  white-space: nowrap !important; // Запрещает тексту переноситься по одной букве
-  padding: 0.5rem 1.5rem !important; // Делает красивые отступы между ячейками
+  white-space: nowrap !important; // Запрещаем тексту переноситься
+  padding: 0.6rem 1.5rem !important;
+  text-align: left;
 }
 
-// Картинки центрируем и не даем им ломать границы
-img {
-  max-width: 100% !important;
-  height: auto !important;
-  display: block;
-  margin: 1.5rem auto !important; // Центрирует картинку в статье
+// 3. Делаем полосу прокрутки «липкой» (работает в современных браузерах)
+.table-container::-webkit-scrollbar {
+  height: 10px; // Толщина нашей плавающей полоски
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: var(--secondary); // Цвет полоски (подстроится под твою тему)
+  border-radius: 5px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: var(--lightgray); // Цвет дорожки, по которой она двигается
 }
