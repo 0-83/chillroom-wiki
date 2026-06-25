@@ -1,34 +1,53 @@
-// 1. Создаем контейнер, который будет прижимать полосу прокрутки к экрану
-.table-container {
-  overflow-x: auto !important; // Включаем горизонтальную прокрутку
-  position: relative;
-  max-width: 100%;
-  margin: 1.5rem 0 !important;
+// Настройки ширины сайта (раздвигаем границы, убирая пустую правую панель)
+:root {
+  --page-width: 1400px !important;       // Разрешаем центральной части быть широкой
+  --side-panel-width: 320px !important;  // Левая панель меню остается стандартной
 }
 
-// 2. Магия: заставляем саму таблицу прокручиваться внутри контейнера
-table {
-  display: table !important; // Возвращаем стандартное отображение таблицы
+// Корректируем только контент, не ломая структуру сетки сайта
+article {
+  max-width: 100% !important;
   width: 100% !important;
+}
+
+// ==========================================
+//   НОВЫЙ КОД ДЛЯ ЦЕНТРИРОВАНИЯ ТАБЛИЦЫ
+// ==========================================
+table {
+  display: table !important;        // Возвращаем стандартное табличное отображение
+  width: auto !important;           // Таблица сжимается до реального размера контента (нужно для центрирования)
+  
+  // Магия выравнивания по центру (автоматические отступы слева и справа):
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+
   border-collapse: collapse;
 }
 
 th, td {
-  white-space: nowrap !important; // Запрещаем тексту переноситься
-  padding: 0.6rem 1.5rem !important;
-  text-align: left;
+  white-space: nowrap !important;   // Запрещаем тексту уродливо переноситься по одной букве
+  padding: 0.6rem 1.8rem !important; // Делаем красивые просторные ячейки
+  text-align: left;                 // Текст внутри ячеек выравниваем по левому краю
 }
 
-// 3. Делаем полосу прокрутки «липкой» (работает в современных браузерах)
-.table-container::-webkit-scrollbar {
-  height: 10px; // Толщина нашей плавающей полоски
+// Добавляем легкое разделение строк, чтобы таблица выглядела аккуратно
+tr {
+  border-bottom: 1px solid var(--lightgray);
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
-.table-container::-webkit-scrollbar-thumb {
-  background: var(--secondary); // Цвет полоски (подстроится под твою тему)
-  border-radius: 5px;
+th {
+  border-bottom: 2px solid var(--gray);
 }
 
-.table-container::-webkit-scrollbar-track {
-  background: var(--lightgray); // Цвет дорожки, по которой она двигается
+// Центрирование картинок в статьях
+img {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+  margin: 1.5rem auto !important;
 }
