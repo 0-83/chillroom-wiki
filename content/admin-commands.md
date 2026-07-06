@@ -1,8 +1,8 @@
 ---
 title: Админские Команды
-draft: true
+search: false
+tags: []
 ---
-
 # 🔐 команды сервера
 * `/inventoryrollback restore` - Просмотр истории инвентаря игрока
 * 
