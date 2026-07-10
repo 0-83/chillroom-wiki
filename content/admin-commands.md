@@ -4,19 +4,18 @@ search: false
 tags: []
 ---
 # 🔐 команды сервера
-### Игрок
-* `/inventoryrollback restore` - Просмотр истории инвентаря игрока
-* `/authme unregister <ник_игрока>` - удалить пароль
-* `/authme changepassword <ник_игрока> <новый_пароль>` - сменить пароль
-* `/invsee check` - инвентарь сейчас
-- `/invsee echeck` - эндерчест сейчас
+## Игрок
+- `/inventoryrollback restore` - Просмотр истории инвентаря игрока
+- `/authme unregister <ник_игрока>` - удалить пароль
+- `/authme changepassword <ник_игрока> <новый_пароль>` - сменить пароль
+- `/invsee check` - инвентарь сейчас`/invsee echeck` - эндерчест сейчас
 - `/invsee offlineinv` - офлайн инвентарь
 - `/invsee offlineec` - офлайн эндерчест
-### Территория
-* `/co rollback r:1 t:4h`
-* `/co restore radius:1 time:3h action:container`
-### Предметы
-* `/give @s minecraft:command_block[item_model="cr:void_shard"]`
+## Территория
+- `/co rollback r:1 t:4h`
+- `/co restore radius:1 time:3h action:container`
+## Предметы
+- `/give @s minecraft:command_block[item_model="cr:void_shard"]`
 - `/give @s minecraft:bread[minecraft:custom_model_data={strings:["bylka"]}]`
 
 [Репозиторий1](https://oparisblue.github.io/minecraft-textures-viewer/#github/Futureazoo/TextureRepository/master)
