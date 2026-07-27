@@ -11,12 +11,13 @@ tags: []
 - `/invsee check` - инвентарь сейчас`/invsee echeck` - эндерчест сейчас
 - `/invsee offlineinv` - офлайн инвентарь
 - `/invsee offlineec` - офлайн эндерчест
+- `/lp user <Ник_Игрока> permission set hiplimit.bypass true` - ограничение на вход с одного айпи
 ## Территория
 - `/co rollback r:1 t:4h`
 - `/co restore radius:1 time:3h action:container`
 ## Предметы
 - `/give @s minecraft:command_block[item_model="cr:void_shard"]`
-- `/give @s minecraft:bread[minecraft:custom_model_data={strings:["bylka"]}]`
+- `/give @s minecraft:iron_sword[minecraft:custom_model_data={strings:["perl"]}]`
 
 [Репозиторий1](https://oparisblue.github.io/minecraft-textures-viewer/#github/Futureazoo/TextureRepository/master)
 [Репозиторий2](https://oparisblue.github.io/minecraft-textures-viewer/#github/Foreck1/foreck-textures/main)
