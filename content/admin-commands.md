@@ -12,7 +12,7 @@ tags: []
 - `/invsee offlineinv` - офлайн инвентарь
 - `/invsee offlineec` - офлайн эндерчест
 - `/lp user <игрок> permission set altdetector.exempt false` - ограничение на вход с одного айпи **ЭТО НЕ ИСПОЛЬЗОВАТЬ**
-- /lp user <Ник> permission set authme.bypass.maxreg true - ограничение на вход с одного айпи
+- `/lp user <Ник> permission set authme.bypass.maxreg true` - ограничение на вход с одного айпи
 ## Территория
 - `/co rollback r:1 t:4h`
 - `/co restore radius:1 time:3h action:container`
@@ -23,9 +23,9 @@ tags: []
 - `/execute in <измерение> run tp <игрок> <координаты>`
 
 ## LuckPerms
-- /lp user <Ник> parent add <Группа>
-- /lp user <Ник> parent remove <Группа>
-- /lp user <Ник> parent addtemp <Группа> <Время>
+- `/lp user <Ник> parent add <Группа>`
+- `/lp user <Ник> parent remove <Группа>`
+- `/lp user <Ник> parent addtemp <Группа> <Время>`
 
 ## Репозиторий
 - [Репозиторий1](https://oparisblue.github.io/minecraft-textures-viewer/#github/Futureazoo/TextureRepository/master)
