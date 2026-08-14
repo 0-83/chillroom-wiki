@@ -12,13 +12,14 @@ tags: []
 - `/invsee offlineinv` - офлайн инвентарь
 - `/invsee offlineec` - офлайн эндерчест
 - `/lp user <игрок> permission set altdetector.exempt false` - ограничение на вход с одного айпи **ЭТО НЕ ИСПОЛЬЗОВАТЬ**
-- `/lp user <Ник> permission set authme.bypass.maxreg true` - ограничение на вход с одного айпи
+- `/lp user player permission set authme.allowmultipleaccounts true` - ограничение на вход с одного айпи
 ## Территория
 - `/co rollback r:1 t:4h`
 - `/co restore radius:1 time:3h action:container`
-## Предметы
+## Предметы и блоки
 - `/give @s minecraft:command_block[item_model="cr:void_shard"]`
 - `/give @s minecraft:iron_sword[minecraft:custom_model_data={strings:["perl"]}]`
+- `/execute align xyz run summon item_frame ~ ~ ~ {Facing:1b, Invisible:1b}` - невидимая рамка
 ## Телепортация
 - `/execute in <измерение> run tp <игрок> <координаты>`
 
