@@ -20,6 +20,8 @@ tags: []
 - `/give @s minecraft:command_block[item_model="cr:void_shard"]`
 - `/give @s minecraft:iron_sword[minecraft:custom_model_data={strings:["perl"]}]`
 - `/execute align xyz run summon item_frame ~ ~ ~ {Facing:1b, Invisible:1b}` - невидимая рамка
+**Сущности**
+- `/data merge entity @e[type=!player,limit=1,sort=nearest] {Invulnerable:1b}` - сделать сущность на которую смотришь бессмертным. 
 ## Телепортация
 - `/execute in <измерение> run tp <игрок> <координаты>`
 
@@ -27,7 +29,10 @@ tags: []
 - `/lp user <Ник> parent add <Группа>`
 - `/lp user <Ник> parent remove <Группа>`
 - `/lp user <Ник> parent addtemp <Группа> <Время>`
-
+## Спаркилосик
+- `/spark sampler --idle-threads true`
+- `/spark sampler --stop`
+- `/spark profiler start --only-ticks-over 60 --timeout 120` 
 ## Репозиторий
 - [Репозиторий1](https://oparisblue.github.io/minecraft-textures-viewer/#github/Futureazoo/TextureRepository/master)
 - [Репозиторий2](https://oparisblue.github.io/minecraft-textures-viewer/#github/Foreck1/foreck-textures/main)
