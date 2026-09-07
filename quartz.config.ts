@@ -1,75 +1,51 @@
-import { QuartzConfig } from "./quartz/cfg"
-import * as Plugin from "./quartz/plugins"
+// ==========================================
+// ФОН ДЛЯ ВСЕГО САЙТА (из content/images/)
+// ==========================================
 
-const config: QuartzConfig = {
-  configuration: {
-    pageTitle: "🪴 Quartz 4.0",
-    enableSPA: true,
-    enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
-    baseUrl: "quartz.jzhao.xyz",
-    ignorePatterns: ["private", "templates"],
-    theme: {
-      typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
-      },
-      colors: {
-        lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-        },
-        darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-        },
-      },
-    },
-  },
-  plugins: {
-    transformers: [
-      Plugin.FrontMatter(),
-      Plugin.TableOfContents(),
-      Plugin.CreatedModifiedDate({
-        priority: ["frontmatter", "filesystem"],
-      }),
-      Plugin.SyntaxHighlighting(),
-      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
-      Plugin.GitHubFlavoredMarkdown(),
-      Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
-      Plugin.Latex({ renderEngine: "katex" }),
-      Plugin.Description(),
-    ],
-    filters: [Plugin.RemoveDrafts()],
-    emitters: [
-      Plugin.AliasRedirects(),
-      Plugin.ComponentResources({ fontOrigin: "googleFonts" }),
-      Plugin.ContentPage(),
-      Plugin.FolderPage(),
-      Plugin.TagPage(),
-      Plugin.ContentIndex({
-        enableSiteMap: true,
-        enableRSS: true,
-      }),
-      Plugin.Assets(),
-      Plugin.Static(),
-    ],
-  },
+body {
+  background-color: #1a1a2e;
+  background-image: url('/content/images/background.png');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
-export default config
+// Затемняем фон для читаемости текста
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: -1;
+}
+
+// Контент поверх фона
+.page {
+  position: relative;
+  z-index: 1;
+}
+
+// Блоки с полупрозрачным фоном (эффект стекла)
+article,
+.sidebar,
+.page-header,
+footer {
+  background: rgba(26, 26, 46, 0.8);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+// Для мобильных устройств
+@media all and (max-width: 1800px) {
+  .sidebar {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    padding: 0 !important;
+  }
+}
