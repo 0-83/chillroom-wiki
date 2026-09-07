@@ -1,38 +1,42 @@
-// Настройки ширины сайта (раздвигаем границы, убирая пустую правую панель)
-:root {
-  --page-width: 1400px !important;       // Разрешаем центральной части быть широкой
-  --side-panel-width: 320px !important;  // Левая панель меню остается стандартной
+// ==========================================
+// КАСТОМНЫЙ ФОН ДЛЯ ВСЕГО САЙТА
+// ==========================================
+
+body {
+  background-color: #1a242b; // Цвет фона, если картинка не загрузится
+  background-image: url('/static/background.jpg'); // ПУТЬ К КАРТИНКЕ
+  background-size: cover; // Растянуть на весь экран
+  background-position: center center; // По центру
+  background-attachment: fixed; // Фиксированный фон (не скроллится)
 }
 
-// Корректируем только контент, не ломая структуру сетки сайта
+// ==========================================
+// ОСТАЛЬНЫЕ ТВОИ НАСТРОЙКИ (ШИРИНА, ТАБЛИЦЫ, КАРТИНКИ)
+// ==========================================
+
+:root {
+  --page-width: 1400px !important;
+  --side-panel-width: 320px !important;
+}
+
 article {
   max-width: 100% !important;
   width: 100% !important;
 }
 
-// ==========================================
-//   КОД ДЛЯ ЦЕНТРИРОВАНИЯ ТАБЛИЦЫ
-// ==========================================
 table {
-  display: table !important;        // Возвращаем стандартное табличное отображение
-  width: auto !important;           // Таблица сжимается до реального размера контента (нужно для центрирования)
-  
-  // Магия выравнивания по центру (автоматические отступы слева и справа):
-  margin-left: auto !important;
-  margin-right: auto !important;
-  margin-top: 2rem !important;
-  margin-bottom: 2rem !important;
-
+  display: table !important;
+  width: auto !important;
+  margin: 2rem auto !important;
   border-collapse: collapse;
 }
 
 th, td {
-  white-space: nowrap !important;   // Запрещаем тексту уродливо переноситься по одной букве
-  padding: 0.6rem 1.8rem !important; // Делаем красивые просторные ячейки
-  text-align: left;                 // Текст внутри ячеек выравниваем по левому краю
+  white-space: nowrap !important;
+  padding: 0.6rem 1.8rem !important;
+  text-align: left;
 }
 
-// Добавляем легкое разделение строк, чтобы таблица выглядела аккуратно
 tr {
   border-bottom: 1px solid var(--lightgray);
   &:last-child {
@@ -44,21 +48,13 @@ th {
   border-bottom: 2px solid var(--gray);
 }
 
-// ==========================================
-//   НОВЫЙ КОД ДЛЯ КАРТИНОК СЛЕВА С ОБТЕКАНИЕМ
-// ==========================================
 img {
   max-width: 100% !important;
   height: auto !important;
-  display: inline-block;           // Позволяет тексту вставать рядом с картинкой
-  float: left;                     // Силой прижимает картинку к левому краю
-  margin-left: 0 !important;       // Убираем центрирование слева
-  margin-right: 1.5rem !important; // Создает красивый отступ справа от картинки до текста
-  margin-top: 0.5rem !important;   
-  margin-bottom: 1rem !important;  // Отступ снизу, чтобы текст под картинкой не прилипал
+  float: left;
+  margin: 0.5rem 1.5rem 1rem 0 !important;
 }
 
-// Сброс обтекания: гарантирует, что крупные блоки, идущие ПОСЛЕ статьи/абзаца, не уедут наверх
 article::after, p::after {
   content: "";
   display: table;
