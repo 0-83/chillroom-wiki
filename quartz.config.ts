@@ -1,7 +1,6 @@
 // ==========================================
 // ФОН ДЛЯ ВСЕГО САЙТА (из content/images/)
 // ==========================================
-
 body {
   background-color: #1a1a2e;
   background-image: url('/chillroom-wiki/content/images/background.png');
@@ -10,7 +9,6 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
-
 // Затемняем фон для читаемости текста
 body::before {
   content: '';
@@ -22,13 +20,11 @@ body::before {
   background: rgba(0, 0, 0, 0.55);
   z-index: -1;
 }
-
 // Контент поверх фона
 .page {
   position: relative;
   z-index: 1;
 }
-
 // Блоки с полупрозрачным фоном (эффект стекла)
 article,
 .sidebar,
@@ -40,7 +36,6 @@ footer {
   padding: 1rem 2rem;
   margin-bottom: 1.5rem;
 }
-
 // Для мобильных устройств
 @media all and (max-width: 1800px) {
   .sidebar {
