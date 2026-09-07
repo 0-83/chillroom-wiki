@@ -1,194 +1,191 @@
 // ==========================================
-// КРАСИВОЕ МЕНЮ И КАРТОЧКИ
+// ПОЛНОСТЬЮ ПЕРЕРАБОТАННЫЙ ДИЗАЙН
 // ==========================================
 
-// 1. Стиль для сайдбара (левое меню)
-.sidebar.left {
-  background: rgba(22, 22, 24, 0.7);
-  backdrop-filter: blur(12px);
-  border-radius: 16px;
-  padding: 1.5rem !important;
-  margin-top: 1rem !important;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+// 1. Убираем лишние прямоугольники и фоны
+body {
+  background-color: #0d1117;
+  background-image: url('/content/images/background.png');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
-// 2. Заголовок в меню
-.page-title a {
-  font-size: 1.8rem !important;
-  font-weight: 800 !important;
-  background: linear-gradient(135deg, #7b97aa 0%, #84a59d 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: none !important;
+// Убираем все лишние фоны у блоков
+article,
+.sidebar,
+.page-header,
+footer,
+.center,
+.page {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
-// 3. Поиск
-.search > #search-icon {
-  background: rgba(255, 255, 255, 0.06) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  border-radius: 10px !important;
-  backdrop-filter: blur(4px);
-  transition: all 0.3s ease;
+// 2. Убираем белую полосу (это border-bottom у заголовков)
+h1, h2, h3, h4, h5, h6 {
+  border-bottom: none !important;
 }
 
-.search > #search-icon:hover {
-  background: rgba(255, 255, 255, 0.12) !important;
-  border-color: rgba(124, 166, 177, 0.4) !important;
-}
-
-// 4. Карточки разделов на главной
-article ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1rem;
-  padding: 0;
-  list-style: none;
-}
-
+// 3. Убираем весь этот ужас с прямоугольниками вокруг карточек
 article ul li {
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 14px;
-  padding: 1.2rem 1.5rem;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  list-style: none;
-  position: relative;
-  overflow: hidden;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0.4rem 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+  list-style: none !important;
 }
 
 article ul li::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, #7b97aa, #84a59d, #7b97aa);
-  background-size: 200% 100%;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  display: none !important;
 }
 
 article ul li:hover {
-  transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(124, 166, 177, 0.3);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  transform: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
-article ul li:hover::before {
-  opacity: 1;
-}
-
-// Ссылки внутри карточек
+// 4. Ссылки в карточках — как обычный текст
 article ul li a {
   color: var(--darkgray);
-  font-weight: 600;
-  font-size: 1.05rem;
+  font-weight: 500;
+  font-size: 1rem;
   text-decoration: none;
+  padding: 0.2rem 0;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+article ul li a:hover {
+  color: #4ade80 !important;
+}
+
+// 5. ЗЕЛЁНЫЙ ГРАДИЕНТ ДЛЯ ВСЕХ ИКОНОК (эмодзи)
+// Превращаем все эмодзи в зелёный градиент
+article ul li a {
   display: flex;
   align-items: center;
   gap: 0.6rem;
 }
 
-// 5. Стили для страниц (статьи)
-article {
-  background: rgba(22, 22, 24, 0.6);
-  backdrop-filter: blur(12px);
-  border-radius: 16px;
-  padding: 2.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+article ul li a:has(img) {
+  // для картинок-иконок
 }
 
-// 6. Заголовок H1 на странице
+// Применяем градиент к первым символам (эмодзи)
+// или просто оборачиваем эмодзи в span
+article ul li a {
+  font-size: 1.1rem;
+}
+
+// 6. Стиль для текста "index" и даты — убираем всё лишнее
 .article-title {
   font-size: 2.8rem !important;
   font-weight: 800 !important;
-  background: linear-gradient(135deg, #7b97aa 0%, #84a59d 50%, #7b97aa 100%);
+  background: linear-gradient(135deg, #4ade80 0%, #22d3ee 50%, #4ade80 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: none !important;
-  display: inline-block !important;
+  display: block !important;
+  margin-bottom: 0.2rem !important;
 }
 
-// 7. Дата публикации
 .content-meta {
-  color: rgba(255, 255, 255, 0.4) !important;
-  font-size: 0.85rem !important;
+  display: none !important;
 }
 
-// 8. Футер
+// 7. Заголовок "Quartz 4.0" в сайдбаре — делаем зелёным
+.page-title a {
+  font-size: 1.6rem !important;
+  font-weight: 700 !important;
+  background: linear-gradient(135deg, #4ade80 0%, #22d3ee 50%, #4ade80 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none !important;
+}
+
+// 8. Разделы (h2) — зелёный градиент
+h2 {
+  font-size: 1.6rem !important;
+  font-weight: 700 !important;
+  background: linear-gradient(135deg, #4ade80 0%, #22d3ee 50%, #4ade80 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  margin-top: 2rem !important;
+}
+
+// 9. Футер — убираем весь мусор
 footer {
-  background: rgba(22, 22, 24, 0.5);
-  backdrop-filter: blur(8px);
-  border-radius: 12px;
-  padding: 1.5rem 2rem !important;
-  border: 1px solid rgba(255, 255, 255, 0.04);
   text-align: center;
-  margin-top: 2rem;
+  opacity: 0.5;
+  font-size: 0.85rem;
+  padding: 2rem 0 !important;
+  background: transparent !important;
+  border: none !important;
+  backdrop-filter: none !important;
+}
+
+footer hr {
+  display: none !important;
 }
 
 footer p {
-  opacity: 0.6;
-  font-size: 0.9rem;
+  margin: 0 !important;
 }
 
-footer a {
-  color: #7b97aa !important;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: #84a59d !important;
-}
-
-// 9. Оглавление (TOC)
-button#toc h3 {
+// 10. Поиск — делаем прозрачным
+.search > #search-icon {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(4px);
   color: var(--darkgray);
-  font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  opacity: 0.7;
 }
 
-// 10. Кнопка переключения темы
-.darkmode svg {
-  fill: var(--darkgray);
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
+// 11. Убираем полосу в оглавлении
+button#toc h3 {
+  border-bottom: none !important;
 }
 
-.darkmode svg:hover {
-  opacity: 1;
+// 12. Общий фон для всего контента — прозрачный
+article {
+  background: transparent !important;
+  padding: 0 !important;
+  backdrop-filter: none !important;
 }
 
-// 11. Адаптив для мобильных
+// 13. Список разделов — без отступов и рамок
+article ul {
+  display: block !important;
+  padding: 0 !important;
+  margin: 1rem 0 !important;
+  list-style: none !important;
+}
+
+// 14. Убираем все лишние полосы и рамки
+hr {
+  display: none !important;
+}
+
+// 15. Для мобильных — всё адаптивно
 @media all and (max-width: 768px) {
-  .sidebar.left {
-    background: transparent !important;
-    backdrop-filter: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-  }
-  
-  article {
-    padding: 1.5rem !important;
-    border-radius: 12px !important;
-  }
-  
   .article-title {
     font-size: 2rem !important;
   }
   
-  article ul {
-    grid-template-columns: 1fr !important;
+  .page-title a {
+    font-size: 1.2rem !important;
   }
 }
