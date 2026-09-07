@@ -1,5 +1,5 @@
 ---
-title: "ChillRoom Wiki"
+title: ChillRoom Wiki
 ---
 
 Добро пожаловать в официальную вики-энциклопедию проекта.  
