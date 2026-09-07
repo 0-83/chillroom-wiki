@@ -4,7 +4,7 @@
 
 body {
   background-color: #1a1a2e;
-  background-image: url('/content/images/background.png');
+  background-image: url('/chillroom-wiki/content/images/background.png');
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
