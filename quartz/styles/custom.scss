@@ -1,5 +1,5 @@
 // ==========================================
-// ФОН
+// ФОН (РАБОТАЕТ В ОБЕИХ ТЕМАХ)
 // ==========================================
 body {
   background-color: #0d1117;
@@ -17,9 +17,7 @@ article,
 .page-header,
 footer,
 .center,
-.page,
-body,
-section {
+.page {
   background: transparent !important;
   backdrop-filter: none !important;
   box-shadow: none !important;
@@ -76,7 +74,6 @@ article ul li:hover {
   box-shadow: none !important;
 }
 
-// Ссылки внутри списка
 article ul li a {
   color: var(--darkgray) !important;
   font-weight: 500 !important;
@@ -95,7 +92,7 @@ article ul li a:hover {
 }
 
 // ==========================================
-// ЗЕЛЁНЫЙ ГРАДИЕНТ ДЛЯ ВСЕГО ТЕКСТА
+// ЗЕЛЁНЫЙ ГРАДИЕНТ ДЛЯ ЗАГОЛОВКОВ
 // ==========================================
 
 // Заголовок страницы (ChillRoom Wiki)
@@ -122,7 +119,7 @@ article ul li a:hover {
   text-shadow: none !important;
 }
 
-// Разделы (h2) — если появятся
+// Разделы (h2)
 h2 {
   font-size: 1.6rem !important;
   font-weight: 700 !important;
@@ -144,7 +141,7 @@ h2 {
 }
 
 // ==========================================
-// ПОИСК — ПРОЗРАЧНЫЙ
+// ПОИСК
 // ==========================================
 .search > #search-icon {
   background: rgba(255, 255, 255, 0.05) !important;
@@ -155,7 +152,7 @@ h2 {
 }
 
 // ==========================================
-// ФУТЕР — МИНИМАЛИСТИЧНЫЙ
+// ФУТЕР
 // ==========================================
 footer {
   text-align: center;
