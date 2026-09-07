@@ -60,3 +60,10 @@ article::after, p::after {
   display: table;
   clear: both;
 }
+// Скрываем дублирующийся заголовок ChillRoom Wiki над описанием
+.article-title {
+  display: none !important;
+}
+
+// Меняем текст "index" на "ChillRoom Wiki" через псевдоэлемент (если нужно)
+// Или просто скрываем старый заголовок и показываем новый
