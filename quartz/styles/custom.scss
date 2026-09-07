@@ -1,63 +1,194 @@
 // ==========================================
-// КАСТОМНЫЙ ФОН ДЛЯ ВСЕГО САЙТА
+// КРАСИВОЕ МЕНЮ И КАРТОЧКИ
 // ==========================================
 
-body {
-  background-color: #1a242b; // Цвет фона, если картинка не загрузится
-  background-image: url('/static/background.jpg'); // ПУТЬ К КАРТИНКЕ
-  background-size: cover; // Растянуть на весь экран
-  background-position: center center; // По центру
-  background-attachment: fixed; // Фиксированный фон (не скроллится)
+// 1. Стиль для сайдбара (левое меню)
+.sidebar.left {
+  background: rgba(22, 22, 24, 0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 1.5rem !important;
+  margin-top: 1rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
-// ==========================================
-// ОСТАЛЬНЫЕ ТВОИ НАСТРОЙКИ (ШИРИНА, ТАБЛИЦЫ, КАРТИНКИ)
-// ==========================================
-
-:root {
-  --page-width: 1400px !important;
-  --side-panel-width: 320px !important;
+// 2. Заголовок в меню
+.page-title a {
+  font-size: 1.8rem !important;
+  font-weight: 800 !important;
+  background: linear-gradient(135deg, #7b97aa 0%, #84a59d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none !important;
 }
 
+// 3. Поиск
+.search > #search-icon {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 10px !important;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+.search > #search-icon:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(124, 166, 177, 0.4) !important;
+}
+
+// 4. Карточки разделов на главной
+article ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+article ul li {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 1.2rem 1.5rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+}
+
+article ul li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #7b97aa, #84a59d, #7b97aa);
+  background-size: 200% 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+article ul li:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(124, 166, 177, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+article ul li:hover::before {
+  opacity: 1;
+}
+
+// Ссылки внутри карточек
+article ul li a {
+  color: var(--darkgray);
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+// 5. Стили для страниц (статьи)
 article {
-  max-width: 100% !important;
-  width: 100% !important;
+  background: rgba(22, 22, 24, 0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-table {
-  display: table !important;
-  width: auto !important;
-  margin: 2rem auto !important;
-  border-collapse: collapse;
+// 6. Заголовок H1 на странице
+.article-title {
+  font-size: 2.8rem !important;
+  font-weight: 800 !important;
+  background: linear-gradient(135deg, #7b97aa 0%, #84a59d 50%, #7b97aa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none !important;
+  display: inline-block !important;
 }
 
-th, td {
-  white-space: nowrap !important;
-  padding: 0.6rem 1.8rem !important;
-  text-align: left;
+// 7. Дата публикации
+.content-meta {
+  color: rgba(255, 255, 255, 0.4) !important;
+  font-size: 0.85rem !important;
 }
 
-tr {
-  border-bottom: 1px solid var(--lightgray);
-  &:last-child {
-    border-bottom: none;
+// 8. Футер
+footer {
+  background: rgba(22, 22, 24, 0.5);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 1.5rem 2rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+footer p {
+  opacity: 0.6;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #7b97aa !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #84a59d !important;
+}
+
+// 9. Оглавление (TOC)
+button#toc h3 {
+  color: var(--darkgray);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+// 10. Кнопка переключения темы
+.darkmode svg {
+  fill: var(--darkgray);
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.darkmode svg:hover {
+  opacity: 1;
+}
+
+// 11. Адаптив для мобильных
+@media all and (max-width: 768px) {
+  .sidebar.left {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  
+  article {
+    padding: 1.5rem !important;
+    border-radius: 12px !important;
+  }
+  
+  .article-title {
+    font-size: 2rem !important;
+  }
+  
+  article ul {
+    grid-template-columns: 1fr !important;
   }
 }
-
-th {
-  border-bottom: 2px solid var(--gray);
-}
-
-img {
-  max-width: 100% !important;
-  height: auto !important;
-  float: left;
-  margin: 0.5rem 1.5rem 1rem 0 !important;
-}
-
-article::after, p::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
