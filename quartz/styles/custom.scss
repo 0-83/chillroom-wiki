@@ -178,5 +178,27 @@ footer a:hover {
   article ul li a {
     font-size: 1rem !important;
   }
-  
+  // Адаптация таблиц для мобильных устройств
+@media all and (max-width: 768px) {
+  // Делаем таблицу прокручиваемой по горизонтали
+  table {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  // Убираем переносы в ячейках
+  th, td {
+    white-space: nowrap !important;
+    padding: 0.4rem 0.8rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  // Уменьшаем шрифт заголовков
+  th {
+    font-size: 0.75rem !important;
+  }
+}
 }
