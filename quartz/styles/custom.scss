@@ -176,7 +176,14 @@ footer a:hover {
     font-size: 1rem !important;
   }
   
-  .article-title + .content-meta::before {
+  // Скрываем слово "index"
+.article-title + .content-meta::before {
+  display: none !important;
+}
+
+// Или просто скрываем сам заголовок статьи (но оставляем дату)
+// Так как "index" — это заголовок статьи в Quartz
+h1.article-title {
   display: none !important;
 }
 }
