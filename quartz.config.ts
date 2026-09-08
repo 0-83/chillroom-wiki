@@ -9,7 +9,7 @@ const config: QuartzConfig = {
     analytics: {
       provider: "plausible",
     },
-    baseUrl: "0-83.github.io/chillroom-wiki",
+    baseUrl: "quartz.jzhao.xyz",
     ignorePatterns: ["private", "templates"],
     theme: {
       typography: {
