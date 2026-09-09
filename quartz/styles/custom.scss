@@ -197,40 +197,36 @@ footer a:hover {
     font-size: 0.75rem !important;
   }
 }
-  // ==========================================
-// ПЕПЕЛЬНАЯ СВЕТЛАЯ ТЕМА
-// ==========================================
-:root {
-  --light: #d6d2cc !important;         
-  --lightgray: #c4c0b9 !important;    
-  --gray: #9a9690 !important;          
-  --darkgray: #4a4743 !important;     
-  --dark: #2b2926 !important;         
-  --secondary: #6a7a7a !important;    
-  --tertiary: #8a9a9a !important;     
-  --highlight: rgba(106, 122, 122, 0.15) !important;
-}
 
-:root {
+  :root {
+  --light: #d6d2cc !important;
+  --lightgray: #c4c0b9 !important;
+  --gray: #9a9690 !important;
+  --darkgray: #4a4743 !important;
+  --dark: #2b2926 !important;
+  --secondary: #6a7a7a !important;
+  --tertiary: #8a9a9a !important;
+  --highlight: rgba(106, 122, 122, 0.15) !important;
+  }
+  
   .page,
   article,
   .sidebar,
   .page-header,
   footer {
-    background: rgba(214, 210, 204, 0.7) !important;
-    backdrop-filter: blur(4px) !important;
+  background: rgba(214, 210, 204, 0.7) !important;
+  backdrop-filter: blur(4px) !important;
   }
-}
-
-:root body {
+  
+  body {
   color: var(--darkgray) !important;
-}
-
-:root a {
+  }
+  
+  a {
   color: var(--secondary) !important;
-}
-
-:root a:hover {
+  }
+  
+  a:hover {
   color: var(--tertiary) !important;
-}
+  }
 }
