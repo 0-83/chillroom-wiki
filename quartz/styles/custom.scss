@@ -198,10 +198,6 @@ footer a:hover {
   }
 }
 
-// ==========================================
-// ПЕПЕЛЬНАЯ СВЕТЛАЯ ТЕМА
-// ==========================================
-
 :root {
   --light: #d6d2cc !important;
   --lightgray: #c4c0b9 !important;
@@ -213,13 +209,33 @@ footer a:hover {
   --highlight: rgba(106, 122, 122, 0.15) !important;
 }
 
-.page,
-article,
-.sidebar,
-.page-header,
-footer {
+:root[saved-theme="dark"] {
+  --light: #161618 !important;
+  --lightgray: #393639 !important;
+  --gray: #646464 !important;
+  --darkgray: #d4d4d4 !important;
+  --dark: #ebebec !important;
+  --secondary: #7b97aa !important;
+  --tertiary: #84a59d !important;
+  --highlight: rgba(143, 159, 169, 0.15) !important;
+}
+
+:root .page,
+:root article,
+:root .sidebar,
+:root .page-header,
+:root footer {
   background: rgba(214, 210, 204, 0.7) !important;
   backdrop-filter: blur(4px) !important;
+}
+
+:root[saved-theme="dark"] .page,
+:root[saved-theme="dark"] article,
+:root[saved-theme="dark"] .sidebar,
+:root[saved-theme="dark"] .page-header,
+:root[saved-theme="dark"] footer {
+  background: transparent !important;
+  backdrop-filter: none !important;
 }
 
 body {
