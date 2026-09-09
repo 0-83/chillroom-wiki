@@ -1,5 +1,5 @@
 // ==========================================
-// ФОН (РАБОТАЕТ В ОБЕИХ ТЕМАХ)
+// ФОН (ТОЛЬКО ТЁМНЫЙ, БЕЗ ПЕРЕКЛЮЧЕНИЙ)
 // ==========================================
 
 body {
@@ -8,6 +8,7 @@ body {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+  color: #d4d4d4 !important;
 }
 
 // Убираем все лишние фоны у блоков
@@ -73,7 +74,7 @@ article ul li:hover {
 }
 
 article ul li a {
-  color: var(--darkgray) !important;
+  color: #d4d4d4 !important;
   font-weight: 500 !important;
   font-size: 1.1rem !important;
   text-decoration: none !important;
@@ -141,7 +142,7 @@ h2 {
   border: 1px solid rgba(255, 255, 255, 0.06) !important;
   border-radius: 8px !important;
   backdrop-filter: blur(4px);
-  color: var(--darkgray);
+  color: #d4d4d4;
 }
 
 // ==========================================
@@ -209,65 +210,4 @@ footer a:hover {
   th {
     font-size: 0.75rem !important;
   }
-}
-
-// ==========================================
-// ПЕПЕЛЬНАЯ СВЕТЛАЯ ТЕМА
-// ==========================================
-
-:root {
-  --light: #d6d2cc !important;
-  --lightgray: #c4c0b9 !important;
-  --gray: #9a9690 !important;
-  --darkgray: #4a4743 !important;
-  --dark: #2b2926 !important;
-  --secondary: #6a7a7a !important;
-  --tertiary: #8a9a9a !important;
-  --highlight: rgba(106, 122, 122, 0.15) !important;
-}
-
-// Делаем блоки полупрозрачными в светлой теме
-:root .page,
-:root article,
-:root .sidebar,
-:root .page-header,
-:root footer {
-  background: rgba(214, 210, 204, 0.6) !important;
-  backdrop-filter: blur(4px) !important;
-  border-radius: 12px !important;
-}
-
-// ТЁМНАЯ ТЕМА (оставляем стандартную, чтобы не ломать)
-[saved-theme="dark"] {
-  --light: #161618 !important;
-  --lightgray: #393639 !important;
-  --gray: #646464 !important;
-  --darkgray: #d4d4d4 !important;
-  --dark: #ebebec !important;
-  --secondary: #7b97aa !important;
-  --tertiary: #84a59d !important;
-  --highlight: rgba(143, 159, 169, 0.15) !important;
-}
-
-// В тёмной теме блоки прозрачные
-[saved-theme="dark"] .page,
-[saved-theme="dark"] article,
-[saved-theme="dark"] .sidebar,
-[saved-theme="dark"] .page-header,
-[saved-theme="dark"] footer {
-  background: transparent !important;
-  backdrop-filter: none !important;
-}
-
-// Текст
-body {
-  color: var(--darkgray) !important;
-}
-
-a {
-  color: var(--secondary) !important;
-}
-
-a:hover {
-  color: var(--tertiary) !important;
 }
