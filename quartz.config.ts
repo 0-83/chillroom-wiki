@@ -11,6 +11,7 @@ const config: QuartzConfig = {
     },
     baseUrl: "quartz.jzhao.xyz",
     ignorePatterns: ["private", "templates"],
+    css: "./quartz/styles/custom.scss",
     theme: {
       typography: {
         header: "Schibsted Grotesk",
