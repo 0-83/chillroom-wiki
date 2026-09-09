@@ -178,7 +178,7 @@ footer a:hover {
   article ul li a {
     font-size: 1rem !important;
   }
-@media all and (max-width: 768px) {
+
   table {
     display: block !important;
     width: 100% !important;
@@ -198,7 +198,11 @@ footer a:hover {
   }
 }
 
-  :root {
+// ==========================================
+// ПЕПЕЛЬНАЯ СВЕТЛАЯ ТЕМА
+// ==========================================
+
+:root {
   --light: #d6d2cc !important;
   --lightgray: #c4c0b9 !important;
   --gray: #9a9690 !important;
@@ -207,26 +211,25 @@ footer a:hover {
   --secondary: #6a7a7a !important;
   --tertiary: #8a9a9a !important;
   --highlight: rgba(106, 122, 122, 0.15) !important;
-  }
-  
-  .page,
-  article,
-  .sidebar,
-  .page-header,
-  footer {
+}
+
+.page,
+article,
+.sidebar,
+.page-header,
+footer {
   background: rgba(214, 210, 204, 0.7) !important;
   backdrop-filter: blur(4px) !important;
-  }
-  
-  body {
+}
+
+body {
   color: var(--darkgray) !important;
-  }
-  
-  a {
+}
+
+a {
   color: var(--secondary) !important;
-  }
-  
-  a:hover {
+}
+
+a:hover {
   color: var(--tertiary) !important;
-  }
 }
