@@ -81,7 +81,7 @@ article h1:first-of-type {
 }
 
 // ==========================================
-// 5. КАРТОЧКИ ДЛЯ СПИСКА РАЗДЕЛОВ
+// 5. КАРТОЧКИ ДЛЯ СПИСКА РАЗДЕЛОВ (ГРАДИЕНТ)
 // ==========================================
 
 article ul {
@@ -94,58 +94,66 @@ article ul {
 }
 
 article ul li {
-  background: rgba(255, 255, 255, 0.06) !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: linear-gradient(135deg, #4ade80 0%, #22d3ee 100%) !important;
+  border: none !important;
   border-radius: 12px !important;
-  padding: 0.9rem 1.3rem !important;
+  padding: 1rem 1.5rem !important;
   margin: 0 !important;
   list-style: none !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 4px 16px rgba(74, 222, 128, 0.25) !important;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
   position: relative !important;
   overflow: hidden !important;
 }
 
+// Убираем старую полоску сверху
 article ul li::before {
+  display: none !important;
+}
+
+// Лёгкое затемнение градиента при наведении
+article ul li::after {
   content: '' !important;
   display: block !important;
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
   width: 100% !important;
-  height: 3px !important;
-  background: linear-gradient(90deg, #4ade80 0%, #22d3ee 50%, #4ade80 100%) !important;
-  opacity: 0.5 !important;
-  transition: opacity 0.3s ease !important;
+  height: 100% !important;
+  background: rgba(0, 0, 0, 0) !important;
+  transition: background 0.3s ease !important;
+  pointer-events: none !important;
 }
 
+article ul li:hover::after {
+  background: rgba(0, 0, 0, 0.15) !important;
+}
+
+// Сама карточка при наведении
 article ul li:hover {
   transform: translateY(-4px) !important;
-  background: rgba(255, 255, 255, 0.1) !important;
-  border-color: rgba(74, 222, 128, 0.5) !important;
-  box-shadow: 0 8px 24px rgba(74, 222, 128, 0.2) !important;
+  box-shadow: 0 8px 24px rgba(74, 222, 128, 0.4) !important;
 }
 
-article ul li:hover::before {
-  opacity: 1 !important;
-}
-
+// Текст внутри карточки — белый с тенью
 article ul li a {
-  color: #d4d4d4 !important;
-  font-weight: 600 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
   font-size: 1.05rem !important;
   text-decoration: none !important;
   padding: 0 !important;
   display: block !important;
   background: transparent !important;
   border: none !important;
-  transition: color 0.2s ease !important;
+  transition: all 0.2s ease !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
+  position: relative !important;
+  z-index: 2 !important;
 }
 
 article ul li a:hover {
-  color: #4ade80 !important;
+  color: #ffffff !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6) !important;
   background: transparent !important;
 }
 
