@@ -208,23 +208,25 @@ footer a:hover {
   th {
     font-size: 0.75rem !important;
   }
-  // ==========================================
+    th {
+    font-size: 0.75rem !important;
+  }
+}
+
+// ==========================================
 // МЕНЯЕМ МЕСТАМИ ЗАГОЛОВОК И ДАТУ
 // ==========================================
 
-// Родительский блок, где лежат и дата, и заголовок
 .page-header .popover-hint {
   display: flex !important;
-  flex-direction: column-reverse !important; // Меняем порядок: заголовок сверху, дата снизу
+  flex-direction: column-reverse !important;
 }
 
-// Заголовок ChillRoom Wiki
 .page-header .popover-hint h1.article-title {
   order: 2 !important;
   margin-bottom: 0.3rem !important;
 }
 
-// Дата (Sep 09, 2026, 1 min read)
 .page-header .popover-hint .content-meta {
   order: 1 !important;
   margin-top: 0 !important;
