@@ -81,7 +81,7 @@ article h1:first-of-type {
 }
 
 // ==========================================
-// 5. КАРТОЧКИ ДЛЯ СПИСКА РАЗДЕЛОВ (ГРАДИЕНТ)
+// 5. КАРТОЧКИ С ГРАДИЕНТНОЙ ЗАЛИВКОЙ
 // ==========================================
 
 article ul {
@@ -111,7 +111,7 @@ article ul li::before {
   display: none !important;
 }
 
-// Лёгкое затемнение градиента при наведении
+// Затемнение при наведении
 article ul li::after {
   content: '' !important;
   display: block !important;
@@ -129,13 +129,12 @@ article ul li:hover::after {
   background: rgba(0, 0, 0, 0.15) !important;
 }
 
-// Сама карточка при наведении
 article ul li:hover {
   transform: translateY(-4px) !important;
   box-shadow: 0 8px 24px rgba(74, 222, 128, 0.4) !important;
 }
 
-// Текст внутри карточки — белый с тенью
+// Текст — всегда белый, читаемый на градиенте
 article ul li a {
   color: #ffffff !important;
   font-weight: 700 !important;
@@ -146,14 +145,14 @@ article ul li a {
   background: transparent !important;
   border: none !important;
   transition: all 0.2s ease !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
   position: relative !important;
   z-index: 2 !important;
 }
 
 article ul li a:hover {
   color: #ffffff !important;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6) !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7) !important;
   background: transparent !important;
 }
 
