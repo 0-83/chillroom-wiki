@@ -6,7 +6,6 @@ const config: QuartzConfig = {
     pageTitle: "🪴 Quartz 4.0",
     enableSPA: true,
     enablePopovers: true,
-    locale: "ru",
     analytics: {
       provider: "plausible",
     },
