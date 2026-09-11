@@ -1,4 +1,6 @@
+// ==========================================
 // 1. ФОН
+// ==========================================
 
 body {
   background-color: #0d1117;
@@ -9,7 +11,9 @@ body {
   color: #d4d4d4 !important;
 }
 
+// ==========================================
 // 2. УБИРАЕМ ЛИШНИЕ ФОНЫ И РАМКИ
+// ==========================================
 
 article,
 .sidebar,
@@ -38,13 +42,17 @@ hr {
   display: none !important;
 }
 
+// ==========================================
 // 3. СКРЫВАЕМ СТАРЫЙ ЗАГОЛОВОК (где "index")
+// ==========================================
 
 h1.article-title {
   display: none !important;
 }
 
+// ==========================================
 // 4. НОВЫЙ ЗАГОЛОВОК + ДАТА ПОД НИМ
+// ==========================================
 
 .page-header .popover-hint {
   display: flex !important;
@@ -59,7 +67,6 @@ h1.article-title {
   font-size: 0.85rem !important;
 }
 
-// Заголовок "ChillRoom Wiki" (из Markdown)
 article h1:first-of-type {
   order: 2 !important;
   font-size: 2rem !important;
@@ -73,44 +80,65 @@ article h1:first-of-type {
   margin-top: 0 !important;
 }
 
-// 5. СПИСКИ НА ГЛАВНОЙ
+// ==========================================
+// 5. КАРТОЧКИ ДЛЯ СПИСКА РАЗДЕЛОВ
+// ==========================================
 
 article ul {
-  list-style: none !important;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
+  gap: 0.8rem !important;
   padding: 0 !important;
   margin: 1.5rem 0 !important;
-  display: block !important;
+  list-style: none !important;
 }
 
 article ul li {
-  background: transparent !important;
-  backdrop-filter: none !important;
-  border: none !important;
-  border-radius: 0 !important;
-  padding: 0.3rem 0 !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  padding: 0.9rem 1.3rem !important;
   margin: 0 !important;
-  box-shadow: none !important;
-  transform: none !important;
   list-style: none !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  position: relative !important;
+  overflow: hidden !important;
 }
 
 article ul li::before {
-  display: none !important;
+  content: '' !important;
+  display: block !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 3px !important;
+  background: linear-gradient(90deg, #4ade80 0%, #22d3ee 50%, #4ade80 100%) !important;
+  opacity: 0.5 !important;
+  transition: opacity 0.3s ease !important;
 }
 
 article ul li:hover {
-  transform: none !important;
-  background: transparent !important;
-  box-shadow: none !important;
+  transform: translateY(-4px) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(74, 222, 128, 0.5) !important;
+  box-shadow: 0 8px 24px rgba(74, 222, 128, 0.2) !important;
+}
+
+article ul li:hover::before {
+  opacity: 1 !important;
 }
 
 article ul li a {
   color: #d4d4d4 !important;
-  font-weight: 500 !important;
-  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  font-size: 1.05rem !important;
   text-decoration: none !important;
-  padding: 0.2rem 0 !important;
-  display: inline-block !important;
+  padding: 0 !important;
+  display: block !important;
   background: transparent !important;
   border: none !important;
   transition: color 0.2s ease !important;
@@ -121,7 +149,9 @@ article ul li a:hover {
   background: transparent !important;
 }
 
+// ==========================================
 // 6. ЗАГОЛОВОК В САЙДБАРЕ (Quartz 4.0)
+// ==========================================
 
 .page-title a {
   font-size: 1.6rem !important;
@@ -133,7 +163,9 @@ article ul li a:hover {
   text-shadow: none !important;
 }
 
+// ==========================================
 // 7. ЗАГОЛОВКИ РАЗДЕЛОВ (h2)
+// ==========================================
 
 h2 {
   font-size: 1.6rem !important;
@@ -148,7 +180,9 @@ h2 {
   margin-top: 2rem !important;
 }
 
+// ==========================================
 // 8. ПОИСК
+// ==========================================
 
 .search > #search-icon {
   background: rgba(255, 255, 255, 0.05) !important;
@@ -158,7 +192,9 @@ h2 {
   color: #d4d4d4;
 }
 
+// ==========================================
 // 9. ФУТЕР
+// ==========================================
 
 footer {
   text-align: center;
@@ -187,7 +223,9 @@ footer a:hover {
   color: #22d3ee !important;
 }
 
-// 10. ТАБЛИЦЫ (МОБИЛЬНАЯ АДАПТАЦИЯ)
+// ==========================================
+// 10. МОБИЛЬНАЯ АДАПТАЦИЯ
+// ==========================================
 
 @media all and (max-width: 768px) {
   article h1:first-of-type {
@@ -200,6 +238,10 @@ footer a:hover {
 
   article ul li a {
     font-size: 1rem !important;
+  }
+
+  article ul {
+    grid-template-columns: 1fr !important;
   }
 
   table {
@@ -219,70 +261,4 @@ footer a:hover {
   th {
     font-size: 0.75rem !important;
   }
-  
-// КАРТОЧКИ ДЛЯ СПИСКА РАЗДЕЛОВ
-
-article ul {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
-  gap: 0.8rem !important;
-  padding: 0 !important;
-  margin: 1.5rem 0 !important;
-  list-style: none !important;
-}
-
-article ul li {
-  background: rgba(20, 20, 25, 0.5) !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
-  border: 1px solid rgba(74, 222, 128, 0.2) !important;
-  border-radius: 12px !important;
-  padding: 1rem 1.5rem !important;
-  margin: 0 !important;
-  list-style: none !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
-  position: relative !important;
-  overflow: hidden !important;
-}
-
-article ul li::before {
-  content: '' !important;
-  display: block !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 3px !important;
-  background: linear-gradient(90deg, #4ade80 0%, #22d3ee 50%, #4ade80 100%) !important;
-  opacity: 0.6 !important;
-  transition: opacity 0.3s ease !important;
-}
-
-article ul li:hover {
-  transform: translateY(-4px) !important;
-  border-color: rgba(74, 222, 128, 0.5) !important;
-  box-shadow: 0 8px 24px rgba(74, 222, 128, 0.15) !important;
-}
-
-article ul li:hover::before {
-  opacity: 1 !important;
-}
-
-article ul li a {
-  color: #d4d4d4 !important;
-  font-weight: 600 !important;
-  font-size: 1.05rem !important;
-  text-decoration: none !important;
-  padding: 0 !important;
-  display: block !important;
-  background: transparent !important;
-  border: none !important;
-  transition: color 0.2s ease !important;
-}
-
-article ul li a:hover {
-  color: #4ade80 !important;
-  background: transparent !important;
-}
 }
