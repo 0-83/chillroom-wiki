@@ -252,4 +252,37 @@ footer a:hover {
   th {
     font-size: 0.75rem !important;
   }
+  // ==========================================
+// 11. ЗАГОЛОВОК "РАЗДЕЛЫ" С ПОЛОСОЙ
+// ==========================================
+
+// Сам заголовок "Разделы" (h2)
+article h2 {
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  background: linear-gradient(135deg, #4ade80 0%, #22d3ee 50%, #4ade80 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-shadow: none !important;
+  border-bottom: none !important;
+  padding-bottom: 0.5rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1.5rem !important;
+  position: relative !important;
+}
+
+// Полоса под заголовком "Разделы"
+article h2::after {
+  content: '' !important;
+  display: block !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, #4ade80 0%, #22d3ee 50%, #4ade80 100%) !important;
+  border-radius: 2px !important;
+  opacity: 0.8 !important;
+}
 }
