@@ -269,15 +269,15 @@ footer a:hover {
     font-size: 0.75rem !important;
   }
   // ==========================================
-// 11. ПОЛОСКА ПОД CHILLROOM WIKI
+// 11. ПОЛОСКА ПОД CHILLROOM WIKI (ФИКС)
 // ==========================================
 
-article h1:first-of-type {
+article h1:not(.article-title) {
   position: relative !important;
   padding-bottom: 0.5rem !important;
 }
 
-article h1:first-of-type::after {
+article h1:not(.article-title)::after {
   content: '' !important;
   display: block !important;
   position: absolute !important;
