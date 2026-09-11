@@ -231,7 +231,29 @@ footer a:hover {
 }
 
 // ==========================================
-// 10. МОБИЛЬНАЯ АДАПТАЦИЯ
+// 10. ПОЛОСКА ПОД CHILLROOM WIKI
+// ==========================================
+
+article h1:not(.article-title) {
+  position: relative !important;
+  padding-bottom: 0.5rem !important;
+}
+
+article h1:not(.article-title)::after {
+  content: '' !important;
+  display: block !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, #4ade80 0%, #22d3ee 50%, #4ade80 100%) !important;
+  border-radius: 2px !important;
+  opacity: 0.8 !important;
+}
+
+// ==========================================
+// 11. МОБИЛЬНАЯ АДАПТАЦИЯ
 // ==========================================
 
 @media all and (max-width: 768px) {
@@ -268,25 +290,4 @@ footer a:hover {
   th {
     font-size: 0.75rem !important;
   }
-  // ==========================================
-// 11. ПОЛОСКА ПОД CHILLROOM WIKI (ФИКС)
-// ==========================================
-
-article h1:not(.article-title) {
-  position: relative !important;
-  padding-bottom: 0.5rem !important;
-}
-
-article h1:not(.article-title)::after {
-  content: '' !important;
-  display: block !important;
-  position: absolute !important;
-  bottom: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 2px !important;
-  background: linear-gradient(90deg, #4ade80 0%, #22d3ee 50%, #4ade80 100%) !important;
-  border-radius: 2px !important;
-  opacity: 0.8 !important;
-}
 }
