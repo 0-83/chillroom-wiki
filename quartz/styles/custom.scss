@@ -1,6 +1,4 @@
-// ==========================================
-// 1. ФОН (всегда тёмный, с картинкой)
-// ==========================================
+// 1. ФОН
 
 body {
   background-color: #0d1117;
@@ -11,9 +9,7 @@ body {
   color: #d4d4d4 !important;
 }
 
-// ==========================================
-// 2. Убираем лишние фоны и рамки
-// ==========================================
+// 2. УБИРАЕМ ЛИШНИЕ ФОНЫ И РАМКИ
 
 article,
 .sidebar,
@@ -42,9 +38,42 @@ hr {
   display: none !important;
 }
 
-// ==========================================
-// 3. Списки на главной
-// ==========================================
+// 3. СКРЫВАЕМ СТАРЫЙ ЗАГОЛОВОК (где "index")
+
+h1.article-title {
+  display: none !important;
+}
+
+// 4. НОВЫЙ ЗАГОЛОВОК + ДАТА ПОД НИМ
+
+.page-header .popover-hint {
+  display: flex !important;
+  flex-direction: column-reverse !important;
+}
+
+.page-header .popover-hint .content-meta {
+  order: 1 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0.3rem !important;
+  color: rgba(255, 255, 255, 0.4) !important;
+  font-size: 0.85rem !important;
+}
+
+// Заголовок "ChillRoom Wiki" (из Markdown)
+article h1:first-of-type {
+  order: 2 !important;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  background: linear-gradient(135deg, #4ade80 0%, #22d3ee 50%, #4ade80 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-shadow: none !important;
+  margin-bottom: 0.2rem !important;
+  margin-top: 0 !important;
+}
+
+// 5. СПИСКИ НА ГЛАВНОЙ
 
 article ul {
   list-style: none !important;
@@ -92,21 +121,7 @@ article ul li a:hover {
   background: transparent !important;
 }
 
-// ==========================================
-// 4. Заголовки (зелёный градиент)
-// ==========================================
-
-.article-title {
-  font-size: 1.8rem !important;
-  font-weight: 700 !important;
-  background: linear-gradient(135deg, #4ade80 0%, #22d3ee 50%, #4ade80 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-  text-shadow: none !important;
-  display: block !important;
-  margin-bottom: 0.2rem !important;
-}
+// 6. ЗАГОЛОВОК В САЙДБАРЕ (Quartz 4.0)
 
 .page-title a {
   font-size: 1.6rem !important;
@@ -118,9 +133,7 @@ article ul li a:hover {
   text-shadow: none !important;
 }
 
-h1.article-title {
-  display: none !important;
-}
+// 7. ЗАГОЛОВКИ РАЗДЕЛОВ (h2)
 
 h2 {
   font-size: 1.6rem !important;
@@ -135,9 +148,7 @@ h2 {
   margin-top: 2rem !important;
 }
 
-// ==========================================
-// 5. Поиск и футер
-// ==========================================
+// 8. ПОИСК
 
 .search > #search-icon {
   background: rgba(255, 255, 255, 0.05) !important;
@@ -146,6 +157,8 @@ h2 {
   backdrop-filter: blur(4px);
   color: #d4d4d4;
 }
+
+// 9. ФУТЕР
 
 footer {
   text-align: center;
@@ -174,19 +187,17 @@ footer a:hover {
   color: #22d3ee !important;
 }
 
-// ==========================================
-// 6. Таблицы (мобильная адаптация)
-// ==========================================
+// 10. ТАБЛИЦЫ (МОБИЛЬНАЯ АДАПТАЦИЯ)
 
 @media all and (max-width: 768px) {
-  .article-title {
-    font-size: 2rem !important;
+  article h1:first-of-type {
+    font-size: 1.6rem !important;
   }
-  
+
   .page-title a {
     font-size: 1.2rem !important;
   }
-  
+
   article ul li a {
     font-size: 1rem !important;
   }
@@ -208,30 +219,4 @@ footer a:hover {
   th {
     font-size: 0.75rem !important;
   }
-    th {
-    font-size: 0.75rem !important;
-  }
-}
-
-// ==========================================
-// МЕНЯЕМ МЕСТАМИ ЗАГОЛОВОК И ДАТУ
-// ==========================================
-
-.page-header .popover-hint {
-  display: flex !important;
-  flex-direction: column-reverse !important;
-}
-
-.page-header .popover-hint h1.article-title {
-  order: 2 !important;
-  margin-bottom: 0.3rem !important;
-}
-
-.page-header .popover-hint .content-meta {
-  order: 1 !important;
-  margin-top: 0 !important;
-  margin-bottom: 0.5rem !important;
-  color: rgba(255, 255, 255, 0.4) !important;
-  font-size: 0.85rem !important;
-}
 }
