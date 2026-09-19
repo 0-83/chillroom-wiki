@@ -71,7 +71,7 @@ article h1:first-of-type {
   order: 2 !important;
   font-size: 2rem !important;
   font-weight: 700 !important;
-  background: linear-gradient(135deg, #4ade80 0%, #22d3ee 50%, #4ade80 100%) !important;
+  background: linear-gradient(135deg, #00688b 0%, #00a1ac 50%, #00688b 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
@@ -95,10 +95,10 @@ article > ul {
 
 article > ul > li,
 article ul li {
-  background: rgba(30, 40, 45, 0.55) !important;
+  background: rgba(0, 50, 70, 0.35) !important;
   backdrop-filter: blur(8px) !important;
   -webkit-backdrop-filter: blur(8px) !important;
-  border: 1px solid rgba(74, 222, 128, 0.15) !important;
+  border: 1px solid rgba(0, 161, 172, 0.2) !important;
   border-radius: 12px !important;
   padding: 1rem 1.5rem !important;
   margin: 0 !important;
@@ -118,18 +118,18 @@ article ul li::before {
   top: 0 !important;
   left: 0 !important;
   width: 100% !important;
-  height: 2px !important;
-  background: linear-gradient(90deg, #4ade80 0%, #22d3ee 50%, #4ade80 100%) !important;
-  opacity: 0.5 !important;
+  height: 4px !important;
+  background: linear-gradient(90deg, #00688b 0%, #00a1ac 50%, #00688b 100%) !important;
+  opacity: 0.6 !important;
   transition: opacity 0.3s ease !important;
 }
 
 article > ul > li:hover,
 article ul li:hover {
   transform: translateY(-3px) !important;
-  background: rgba(40, 55, 60, 0.7) !important;
-  border-color: rgba(74, 222, 128, 0.35) !important;
-  box-shadow: 0 6px 20px rgba(74, 222, 128, 0.15) !important;
+  background: rgba(0, 70, 90, 0.5) !important;
+  border-color: rgba(0, 178, 212, 0.4) !important;
+  box-shadow: 0 6px 20px rgba(0, 178, 212, 0.15) !important;
 }
 
 article > ul > li:hover::before,
@@ -154,7 +154,7 @@ article ul li a {
 
 article > ul > li > a:hover,
 article ul li a:hover {
-  color: #4ade80 !important;
+  color: #00b2d4 !important;
   background: transparent !important;
 }
 
@@ -165,7 +165,7 @@ article ul li a:hover {
 h2 {
   font-size: 1.8rem !important;
   font-weight: 700 !important;
-  background: linear-gradient(135deg, #4ade80 0%, #22d3ee 50%, #4ade80 100%) !important;
+  background: linear-gradient(135deg, #00688b 0%, #00a1ac 50%, #00688b 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
@@ -186,7 +186,7 @@ h2::after {
   left: 0 !important;
   width: 100% !important;
   height: 4px !important;
-  background: linear-gradient(90deg, #4ade80 0%, #22d3ee 50%, #4ade80 100%) !important;
+  background: linear-gradient(90deg, #00688b 0%, #00a1ac 50%, #00688b 100%) !important;
   border-radius: 2px !important;
   opacity: 0.8 !important;
 }
@@ -198,7 +198,7 @@ h2::after {
 .page-title a {
   font-size: 1.6rem !important;
   font-weight: 700 !important;
-  background: linear-gradient(135deg, #4ade80 0%, #22d3ee 50%, #4ade80 100%) !important;
+  background: linear-gradient(135deg, #00688b 0%, #00a1ac 50%, #00688b 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
@@ -211,7 +211,7 @@ h2::after {
 
 .search > #search-icon {
   background: rgba(255, 255, 255, 0.05) !important;
-  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(0, 161, 172, 0.15) !important;
   border-radius: 8px !important;
   backdrop-filter: blur(4px);
   color: #d4d4d4;
@@ -240,12 +240,12 @@ footer p {
 }
 
 footer a {
-  color: #4ade80 !important;
+  color: #00a1ac !important;
   text-decoration: none !important;
 }
 
 footer a:hover {
-  color: #22d3ee !important;
+  color: #00b2d4 !important;
 }
 
 // ==========================================
@@ -264,8 +264,8 @@ article h1:not(.article-title)::after {
   bottom: 0 !important;
   left: 0 !important;
   width: 100% !important;
-  height: 2px !important;
-  background: linear-gradient(90deg, #4ade80 0%, #22d3ee 50%, #4ade80 100%) !important;
+  height: 4px !important;
+  background: linear-gradient(90deg, #00688b 0%, #00a1ac 50%, #00688b 100%) !important;
   border-radius: 2px !important;
   opacity: 0.8 !important;
 }
