@@ -68,7 +68,7 @@ h1.article-title {
 }
 
 // ==========================================
-// 5. ЗАГОЛОВКИ (ТОЛЬКО НЕБЕСНО-ГОЛУБОЙ)
+// 5. ЗАГОЛОВКИ (ГРАДИЕНТ)
 // ==========================================
 
 article h1:not(.article-title),
@@ -76,7 +76,7 @@ h2 {
   position: relative !important;
   font-size: 1.8rem !important;
   font-weight: 700 !important;
-  background: linear-gradient(135deg, #00688b 0%, #00a1ac 100%) !important;
+  background: linear-gradient(135deg, #0a4d68 0%, #00a1ac 50%, #00d4d4 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
@@ -97,13 +97,13 @@ h2::after {
   left: 0 !important;
   width: 100% !important;
   height: 3px !important;
-  background: linear-gradient(90deg, #00688b 0%, #00a1ac 100%) !important;
+  background: linear-gradient(90deg, #0a4d68 0%, #00a1ac 50%, #00d4d4 100%) !important;
   border-radius: 2px !important;
   opacity: 0.8 !important;
 }
 
 // ==========================================
-// 6. КАРТОЧКИ РАЗДЕЛОВ (ТОЛЬКО ГОЛУБЫЕ)
+// 6. КАРТОЧКИ
 // ==========================================
 
 article > ul {
@@ -140,7 +140,7 @@ article ul li::before {
   left: 0 !important;
   width: 100% !important;
   height: 4px !important;
-  background: linear-gradient(90deg, #00688b 0%, #00a1ac 100%) !important;
+  background: linear-gradient(90deg, #0a4d68 0%, #00a1ac 50%, #00d4d4 100%) !important;
   opacity: 0.5 !important;
   transition: opacity 0.3s ease !important;
 }
@@ -175,18 +175,18 @@ article ul li a {
 
 article > ul > li > a:hover,
 article ul li a:hover {
-  color: #00b2d4 !important;
+  color: #00d4d4 !important;
   background: transparent !important;
 }
 
 // ==========================================
-// 7. ЗАГОЛОВОК В САЙДБАРЕ (Quartz 4.0)
+// 7. ЗАГОЛОВОК В САЙДБАРЕ
 // ==========================================
 
 .page-title a {
   font-size: 1.6rem !important;
   font-weight: 700 !important;
-  background: linear-gradient(135deg, #00688b 0%, #00a1ac 100%) !important;
+  background: linear-gradient(135deg, #0a4d68 0%, #00a1ac 50%, #00d4d4 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
@@ -233,7 +233,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #00b2d4 !important;
+  color: #00d4d4 !important;
 }
 
 // ==========================================
