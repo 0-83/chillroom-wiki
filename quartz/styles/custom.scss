@@ -247,7 +247,7 @@ footer a:hover {
     font-size: 0.75rem !important;
   }
   // ==========================================
-// 11. КВАДРАТИКИ ВОКРУГ КОМАНД
+// 11. УБИРАЕМ КАРТОЧКИ ВОКРУГ КОМАНД
 // ==========================================
 
 code {
@@ -256,8 +256,10 @@ code {
   padding: 0 !important;
   color: #00b2ee !important;
   font-weight: 600 !important;
+  font-size: 0.95rem !important;
 }
 
+// Убираем фон и рамки у блоков кода
 pre {
   background: transparent !important;
   border: none !important;
@@ -271,5 +273,31 @@ pre > code {
   border: none !important;
   padding: 0 !important;
   color: #d4d4d4 !important;
+}
+
+.callout {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0.5rem 0 !important;
+  border-radius: 0 !important;
+}
+
+.callout-title {
+  display: none !important;
+}
+
+.callout-title-inner {
+  color: #00b2ee !important;
+  font-weight: 600 !important;
+}
+
+article .callout,
+article .callout-content {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
 }
 }
