@@ -43,7 +43,7 @@ hr {
 }
 
 // ==========================================
-// 3. СКРЫВАЕМ СТАРЫЙ ЗАГОЛОВОК (где "index")
+// 3. СКРЫВАЕМ СТАРЫЙ ЗАГОЛОВОК ("index")
 // ==========================================
 
 h1.article-title {
@@ -51,7 +51,7 @@ h1.article-title {
 }
 
 // ==========================================
-// 4. НОВЫЙ ЗАГОЛОВОК + ДАТА ПОД НИМ
+// 4. ЗАГОЛОВОК + ДАТА ПОД НИМ
 // ==========================================
 
 .page-header .popover-hint {
@@ -67,21 +67,43 @@ h1.article-title {
   font-size: 0.85rem !important;
 }
 
-article h1:first-of-type {
-  order: 2 !important;
-  font-size: 2rem !important;
+// ==========================================
+// 5. ЗАГОЛОВКИ (НЕБЕСНО-ГОЛУБОЙ ГРАДИЕНТ)
+// ==========================================
+
+article h1:not(.article-title),
+h2 {
+  position: relative !important;
+  font-size: 1.8rem !important;
   font-weight: 700 !important;
-  background: linear-gradient(135deg, #00688b 0%, #00a1ac 50%, #00688b 100%) !important;
+  background: linear-gradient(135deg, #00688b 0%, #00a1ac 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
   text-shadow: none !important;
-  margin-bottom: 0.2rem !important;
-  margin-top: 0 !important;
+  border-bottom: none !important;
+  padding-bottom: 0.5rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1.5rem !important;
+  display: block !important;
+}
+
+article h1:not(.article-title)::after,
+h2::after {
+  content: '' !important;
+  display: block !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 3px !important;
+  background: linear-gradient(90deg, #00688b 0%, #00a1ac 100%) !important;
+  border-radius: 2px !important;
+  opacity: 0.8 !important;
 }
 
 // ==========================================
-// 5. КАРТОЧКИ
+// 6. КАРТОЧКИ РАЗДЕЛОВ (НЕБЕСНО-ГОЛУБЫЕ)
 // ==========================================
 
 article > ul {
@@ -104,12 +126,11 @@ article ul li {
   margin: 0 !important;
   list-style: none !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  transition: all 0.3s ease !important;
   position: relative !important;
   overflow: hidden !important;
 }
 
-// Тонкая градиентная полоска сверху — как акцент
 article > ul > li::before,
 article ul li::before {
   content: '' !important;
@@ -119,8 +140,8 @@ article ul li::before {
   left: 0 !important;
   width: 100% !important;
   height: 4px !important;
-  background: linear-gradient(90deg, #00688b 0%, #00a1ac 50%, #00688b 100%) !important;
-  opacity: 0.6 !important;
+  background: linear-gradient(90deg, #00688b 0%, #00a1ac 100%) !important;
+  opacity: 0.5 !important;
   transition: opacity 0.3s ease !important;
 }
 
@@ -159,46 +180,13 @@ article ul li a:hover {
 }
 
 // ==========================================
-// 6. ЗАГОЛОВОК "РАЗДЕЛЫ" С ПОЛОСОЙ
-// ==========================================
-
-h2 {
-  font-size: 1.8rem !important;
-  font-weight: 700 !important;
-  background: linear-gradient(135deg, #00688b 0%, #00a1ac 50%, #00688b 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-  text-shadow: none !important;
-  border-bottom: none !important;
-  padding-bottom: 0.5rem !important;
-  margin-top: 2rem !important;
-  margin-bottom: 1.5rem !important;
-  position: relative !important;
-  display: block !important;
-}
-
-h2::after {
-  content: '' !important;
-  display: block !important;
-  position: absolute !important;
-  bottom: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 4px !important;
-  background: linear-gradient(90deg, #00688b 0%, #00a1ac 50%, #00688b 100%) !important;
-  border-radius: 2px !important;
-  opacity: 0.8 !important;
-}
-
-// ==========================================
 // 7. ЗАГОЛОВОК В САЙДБАРЕ (Quartz 4.0)
 // ==========================================
 
 .page-title a {
   font-size: 1.6rem !important;
   font-weight: 700 !important;
-  background: linear-gradient(135deg, #00688b 0%, #00a1ac 50%, #00688b 100%) !important;
+  background: linear-gradient(135deg, #00688b 0%, #00a1ac 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
@@ -249,42 +237,17 @@ footer a:hover {
 }
 
 // ==========================================
-// 10. ПОЛОСКА ПОД CHILLROOM WIKI
-// ==========================================
-
-article h1:not(.article-title) {
-  position: relative !important;
-  padding-bottom: 0.5rem !important;
-}
-
-article h1:not(.article-title)::after {
-  content: '' !important;
-  display: block !important;
-  position: absolute !important;
-  bottom: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 4px !important;
-  background: linear-gradient(90deg, #00688b 0%, #00a1ac 50%, #00688b 100%) !important;
-  border-radius: 2px !important;
-  opacity: 0.8 !important;
-}
-
-// ==========================================
-// 11. МОБИЛЬНАЯ АДАПТАЦИЯ
+// 10. МОБИЛЬНАЯ АДАПТАЦИЯ
 // ==========================================
 
 @media all and (max-width: 768px) {
-  article h1:first-of-type {
-    font-size: 1.6rem !important;
+  article h1:not(.article-title),
+  h2 {
+    font-size: 1.5rem !important;
   }
 
   .page-title a {
     font-size: 1.2rem !important;
-  }
-
-  article ul li a {
-    font-size: 1rem !important;
   }
 
   article > ul {
