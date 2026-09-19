@@ -68,11 +68,12 @@ h1.article-title {
 }
 
 // ==========================================
-// 5. ЗАГОЛОВКИ (НЕБЕСНО-ГОЛУБОЙ ГРАДИЕНТ)
+// 5. ВСЕ ЗАГОЛОВКИ (НЕБЕСНО-ГОЛУБОЙ ГРАДИЕНТ)
 // ==========================================
 
-article h1:not(.article-title),
-h2 {
+h1:not(.article-title),
+h2,
+h3 {
   position: relative !important;
   font-size: 1.8rem !important;
   font-weight: 700 !important;
@@ -88,8 +89,9 @@ h2 {
   display: block !important;
 }
 
-article h1:not(.article-title)::after,
-h2::after {
+h1:not(.article-title)::after,
+h2::after,
+h3::after {
   content: '' !important;
   display: block !important;
   position: absolute !important;
@@ -241,8 +243,9 @@ footer a:hover {
 // ==========================================
 
 @media all and (max-width: 768px) {
-  article h1:not(.article-title),
-  h2 {
+  h1:not(.article-title),
+  h2,
+  h3 {
     font-size: 1.5rem !important;
   }
 
