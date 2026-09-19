@@ -68,14 +68,11 @@ h1.article-title {
 }
 
 // ==========================================
-// 5. ВСЕ ЗАГОЛОВКИ (НЕБЕСНО-ГОЛУБОЙ ГРАДИЕНТ)
+// 5. ВСЕ ЗАГОЛОВКИ (ГРАДИЕНТ)
 // ==========================================
 
-h1:not(.article-title),
-h2,
-h3 {
+h1, h2, h3, h4 {
   position: relative !important;
-  font-size: 1.8rem !important;
   font-weight: 700 !important;
   background: linear-gradient(135deg, #00688b 0%, #00b2ee 50%, #87ceff 100%) !important;
   -webkit-background-clip: text !important;
@@ -84,14 +81,10 @@ h3 {
   text-shadow: none !important;
   border-bottom: none !important;
   padding-bottom: 0.5rem !important;
-  margin-top: 2rem !important;
-  margin-bottom: 1.5rem !important;
   display: block !important;
 }
 
-h1:not(.article-title)::after,
-h2::after,
-h3::after {
+h1::after, h2::after, h3::after {
   content: '' !important;
   display: block !important;
   position: absolute !important;
@@ -105,10 +98,11 @@ h3::after {
 }
 
 // ==========================================
-// 6. КАРТОЧКИ
+// 6. КАРТОЧКИ РАЗДЕЛОВ
 // ==========================================
 
-article > ul {
+article ul,
+ul.section-ul {
   display: grid !important;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
   gap: 0.8rem !important;
@@ -117,11 +111,10 @@ article > ul {
   list-style: none !important;
 }
 
-article > ul > li,
-article ul li {
+article li,
+li.section-li {
   background: rgba(0, 60, 90, 0.35) !important;
   backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
   border: 1px solid rgba(0, 178, 238, 0.2) !important;
   border-radius: 12px !important;
   padding: 1rem 1.5rem !important;
@@ -133,8 +126,8 @@ article ul li {
   overflow: hidden !important;
 }
 
-article > ul > li::before,
-article ul li::before {
+article li::before,
+li.section-li::before {
   content: '' !important;
   display: block !important;
   position: absolute !important;
@@ -147,38 +140,17 @@ article ul li::before {
   transition: opacity 0.3s ease !important;
 }
 
-article > ul > li:hover,
-article ul li:hover {
+article li:hover,
+li.section-li:hover {
   transform: translateY(-3px) !important;
   background: rgba(0, 80, 110, 0.5) !important;
   border-color: rgba(0, 204, 255, 0.4) !important;
   box-shadow: 0 6px 20px rgba(0, 204, 255, 0.2) !important;
 }
 
-article > ul > li:hover::before,
-article ul li:hover::before {
+article li:hover::before,
+li.section-li:hover::before {
   opacity: 1 !important;
-}
-
-article > ul > li > a,
-article ul li a {
-  color: #d4d4d4 !important;
-  font-weight: 600 !important;
-  font-size: 1.05rem !important;
-  text-decoration: none !important;
-  padding: 0 !important;
-  display: block !important;
-  background: transparent !important;
-  border: none !important;
-  transition: color 0.2s ease !important;
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-article > ul > li > a:hover,
-article ul li a:hover {
-  color: #00ccff !important;
-  background: transparent !important;
 }
 
 // ==========================================
