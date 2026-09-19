@@ -246,4 +246,30 @@ footer a:hover {
   th {
     font-size: 0.75rem !important;
   }
+  // ==========================================
+// 11. КВАДРАТИКИ ВОКРУГ КОМАНД
+// ==========================================
+
+code {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  color: #00b2ee !important;
+  font-weight: 600 !important;
+}
+
+pre {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0.5rem 0 !important;
+}
+
+pre > code {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  color: #d4d4d4 !important;
+}
 }
