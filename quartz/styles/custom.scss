@@ -68,7 +68,7 @@ h1.article-title {
 }
 
 // ==========================================
-// 5. ЗАГОЛОВКИ (ГРАДИЕНТ)
+// 5. ЗАГОЛОВКИ (НЕБЕСНО-ГОЛУБОЙ ГРАДИЕНТ)
 // ==========================================
 
 article h1:not(.article-title),
@@ -76,7 +76,7 @@ h2 {
   position: relative !important;
   font-size: 1.8rem !important;
   font-weight: 700 !important;
-  background: linear-gradient(135deg, #0a4d68 0%, #00a1ac 50%, #00d4d4 100%) !important;
+  background: linear-gradient(135deg, #00688b 0%, #00b2ee 50%, #87ceff 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
@@ -97,7 +97,7 @@ h2::after {
   left: 0 !important;
   width: 100% !important;
   height: 3px !important;
-  background: linear-gradient(90deg, #0a4d68 0%, #00a1ac 50%, #00d4d4 100%) !important;
+  background: linear-gradient(90deg, #00688b 0%, #00b2ee 50%, #87ceff 100%) !important;
   border-radius: 2px !important;
   opacity: 0.8 !important;
 }
@@ -117,10 +117,10 @@ article > ul {
 
 article > ul > li,
 article ul li {
-  background: rgba(0, 50, 70, 0.35) !important;
+  background: rgba(0, 60, 90, 0.35) !important;
   backdrop-filter: blur(8px) !important;
   -webkit-backdrop-filter: blur(8px) !important;
-  border: 1px solid rgba(0, 161, 172, 0.2) !important;
+  border: 1px solid rgba(0, 178, 238, 0.2) !important;
   border-radius: 12px !important;
   padding: 1rem 1.5rem !important;
   margin: 0 !important;
@@ -140,7 +140,7 @@ article ul li::before {
   left: 0 !important;
   width: 100% !important;
   height: 4px !important;
-  background: linear-gradient(90deg, #0a4d68 0%, #00a1ac 50%, #00d4d4 100%) !important;
+  background: linear-gradient(90deg, #00688b 0%, #00b2ee 50%, #87ceff 100%) !important;
   opacity: 0.5 !important;
   transition: opacity 0.3s ease !important;
 }
@@ -148,9 +148,9 @@ article ul li::before {
 article > ul > li:hover,
 article ul li:hover {
   transform: translateY(-3px) !important;
-  background: rgba(0, 70, 90, 0.5) !important;
-  border-color: rgba(0, 178, 212, 0.4) !important;
-  box-shadow: 0 6px 20px rgba(0, 178, 212, 0.15) !important;
+  background: rgba(0, 80, 110, 0.5) !important;
+  border-color: rgba(0, 204, 255, 0.4) !important;
+  box-shadow: 0 6px 20px rgba(0, 204, 255, 0.2) !important;
 }
 
 article > ul > li:hover::before,
@@ -175,7 +175,7 @@ article ul li a {
 
 article > ul > li > a:hover,
 article ul li a:hover {
-  color: #00d4d4 !important;
+  color: #00ccff !important;
   background: transparent !important;
 }
 
@@ -186,7 +186,7 @@ article ul li a:hover {
 .page-title a {
   font-size: 1.6rem !important;
   font-weight: 700 !important;
-  background: linear-gradient(135deg, #0a4d68 0%, #00a1ac 50%, #00d4d4 100%) !important;
+  background: linear-gradient(135deg, #00688b 0%, #00b2ee 50%, #87ceff 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
@@ -199,7 +199,7 @@ article ul li a:hover {
 
 .search > #search-icon {
   background: rgba(255, 255, 255, 0.05) !important;
-  border: 1px solid rgba(0, 161, 172, 0.15) !important;
+  border: 1px solid rgba(0, 178, 238, 0.15) !important;
   border-radius: 8px !important;
   backdrop-filter: blur(4px);
   color: #d4d4d4;
@@ -228,12 +228,12 @@ footer p {
 }
 
 footer a {
-  color: #00a1ac !important;
+  color: #00b2ee !important;
   text-decoration: none !important;
 }
 
 footer a:hover {
-  color: #00d4d4 !important;
+  color: #87ceff !important;
 }
 
 // ==========================================
