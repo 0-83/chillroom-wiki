@@ -68,7 +68,7 @@ h1.article-title {
 }
 
 // ==========================================
-// 5. ВСЕ ЗАГОЛОВКИ (НЕБЕСНО-ГОЛУБОЙ ГРАДИЕНТ)
+// 5. ВСЕ ЗАГОЛОВКИ (ГРАДИЕНТ #49AAFF → #428BE4)
 // ==========================================
 
 h1:not(.article-title),
@@ -77,7 +77,7 @@ h3 {
   position: relative !important;
   font-size: 1.8rem !important;
   font-weight: 700 !important;
-  background: linear-gradient(135deg, #00688b 0%, #00b2ee 50%, #87ceff 100%) !important;
+  background: linear-gradient(135deg, #49AAFF 0%, #428BE4 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
@@ -99,7 +99,7 @@ h3::after {
   left: 0 !important;
   width: 100% !important;
   height: 3px !important;
-  background: linear-gradient(90deg, #00688b 0%, #00b2ee 50%, #87ceff 100%) !important;
+  background: linear-gradient(90deg, #49AAFF 0%, #428BE4 100%) !important;
   border-radius: 2px !important;
   opacity: 0.8 !important;
 }
@@ -108,7 +108,6 @@ h3::after {
 // 6. КАРТОЧКИ (КРОМЕ СТРАНИЦЫ АДМИН-КОМАНД)
 // ==========================================
 
-// Стили применяются везде, КРОМЕ страницы admin-commands
 body:not([data-slug="admin-commands"]) article > ul {
   display: grid !important;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
@@ -122,7 +121,7 @@ body:not([data-slug="admin-commands"]) article > ul > li {
   background: rgba(0, 60, 90, 0.35) !important;
   backdrop-filter: blur(8px) !important;
   -webkit-backdrop-filter: blur(8px) !important;
-  border: 1px solid rgba(0, 178, 238, 0.2) !important;
+  border: 1px solid rgba(73, 170, 255, 0.2) !important;
   border-radius: 12px !important;
   padding: 1rem 1.5rem !important;
   margin: 0 !important;
@@ -141,7 +140,7 @@ body:not([data-slug="admin-commands"]) article > ul > li::before {
   left: 0 !important;
   width: 100% !important;
   height: 4px !important;
-  background: linear-gradient(90deg, #00688b 0%, #00b2ee 50%, #87ceff 100%) !important;
+  background: linear-gradient(90deg, #49AAFF 0%, #428BE4 100%) !important;
   opacity: 0.5 !important;
   transition: opacity 0.3s ease !important;
 }
@@ -149,8 +148,8 @@ body:not([data-slug="admin-commands"]) article > ul > li::before {
 body:not([data-slug="admin-commands"]) article > ul > li:hover {
   transform: translateY(-3px) !important;
   background: rgba(0, 80, 110, 0.5) !important;
-  border-color: rgba(0, 204, 255, 0.4) !important;
-  box-shadow: 0 6px 20px rgba(0, 204, 255, 0.2) !important;
+  border-color: rgba(73, 170, 255, 0.4) !important;
+  box-shadow: 0 6px 20px rgba(73, 170, 255, 0.2) !important;
 }
 
 body:not([data-slug="admin-commands"]) article > ul > li:hover::before {
@@ -172,7 +171,7 @@ body:not([data-slug="admin-commands"]) article > ul > li > a {
 }
 
 body:not([data-slug="admin-commands"]) article > ul > li > a:hover {
-  color: #00ccff !important;
+  color: #49AAFF !important;
   background: transparent !important;
 }
 
@@ -206,7 +205,7 @@ body[data-slug="admin-commands"] article code {
   background: transparent !important;
   border: none !important;
   padding: 0 !important;
-  color: #00b2ee !important;
+  color: #49AAFF !important;
   font-weight: 600 !important;
   font-size: 0.95rem !important;
 }
@@ -233,7 +232,7 @@ body[data-slug="admin-commands"] article pre > code {
 .page-title a {
   font-size: 1.6rem !important;
   font-weight: 700 !important;
-  background: linear-gradient(135deg, #00688b 0%, #00b2ee 50%, #87ceff 100%) !important;
+  background: linear-gradient(135deg, #49AAFF 0%, #428BE4 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
@@ -246,7 +245,7 @@ body[data-slug="admin-commands"] article pre > code {
 
 .search > #search-icon {
   background: rgba(255, 255, 255, 0.05) !important;
-  border: 1px solid rgba(0, 178, 238, 0.15) !important;
+  border: 1px solid rgba(73, 170, 255, 0.15) !important;
   border-radius: 8px !important;
   backdrop-filter: blur(4px);
   color: #d4d4d4;
@@ -275,12 +274,12 @@ footer p {
 }
 
 footer a {
-  color: #00b2ee !important;
+  color: #49AAFF !important;
   text-decoration: none !important;
 }
 
 footer a:hover {
-  color: #87ceff !important;
+  color: #428BE4 !important;
 }
 
 // ==========================================
