@@ -1,3 +1,6 @@
+---
+title: ChillRoom Wiki
+---
 # ChillRoom Wiki
 Добро пожаловать в "ChillRoom" — Minecraft-сервер, где каждый найдёт чем заняться.
 ## Разделы
