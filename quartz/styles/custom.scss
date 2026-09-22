@@ -103,6 +103,17 @@ h3::after {
   border-radius: 2px !important;
   opacity: 0.8 !important;
 }
+// Эмодзи в заголовках — стандартный цвет
+h1 .emoji,
+h2 .emoji,
+h3 .emoji {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  background-clip: initial !important;
+  color: initial !important;
+  filter: none !important;
+}
 
 // ==========================================
 // 6. КАРТОЧКИ (КРОМЕ СТРАНИЦЫ АДМИН-КОМАНД)
