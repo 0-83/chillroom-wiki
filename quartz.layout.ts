@@ -39,5 +39,5 @@ export const defaultListPageLayout: PageLayout = {
     Component.Search(),
     Component.Darkmode(),
   ],
-  right: [], // Здесь тоже правая панель пустая
+  right: [],
 }
