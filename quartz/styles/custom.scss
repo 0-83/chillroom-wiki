@@ -105,29 +105,6 @@ h3::after {
 }
 
 // ==========================================
-// 5.1. ИСКЛЮЧЕНИЕ ДЛЯ СТРАНИЦЫ "ПРАВИЛА"
-// ==========================================
-
-// Заголовки без градиента
-body[data-slug="Правила"] h1:not(.article-title),
-body[data-slug="Правила"] h2,
-body[data-slug="Правила"] h3 {
-  background: none !important;
-  -webkit-background-clip: initial !important;
-  -webkit-text-fill-color: #d4d4d4 !important;
-  background-clip: initial !important;
-  color: #d4d4d4 !important;
-  text-shadow: none !important;
-}
-
-// Полоса под заголовком — оставляем как есть (можно убрать, если не нужна)
-body[data-slug="Правила"] h1:not(.article-title)::after,
-body[data-slug="Правила"] h2::after,
-body[data-slug="Правила"] h3::after {
-  background: linear-gradient(90deg, #49AAFF 0%, #428BE4 100%) !important;
-}
-
-// ==========================================
 // 6. КАРТОЧКИ (КРОМЕ СТРАНИЦЫ АДМИН-КОМАНД)
 // ==========================================
 
@@ -341,4 +318,33 @@ footer a:hover {
   th {
     font-size: 0.75rem !important;
   }
+  // ==========================================
+// ИСКЛЮЧЕНИЕ ДЛЯ СТРАНИЦЫ "ПРАВИЛА"
+// ==========================================
+
+// Убираем градиент у заголовков на странице правил
+// Определяем по ссылке в URL через :has()
+article h1:not(.article-title),
+article h2,
+article h3 {
+  /* по умолчанию — градиент (уже задан выше) */
+}
+
+// Исключение: если в заголовке статьи есть слово "Правила" или "Аккаунты и честная игра"
+article h2#1-аккаунты-и-честная-игра ~ h2,
+article h2#1-аккаунты-и-честная-игра,
+article h2#2-производительность-сервера,
+article h2#3-имущество-и-территории,
+article h2#4-торговля-и-сделки,
+article h2#5-контент-и-внешний-вид,
+article h2#6-штрафы,
+article h2#7-жалобы-и-администрация,
+article h2#8-возраст-и-допуск {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #d4d4d4 !important;
+  background-clip: initial !important;
+  color: #d4d4d4 !important;
+  text-shadow: none !important;
+}
 }
