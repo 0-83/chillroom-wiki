@@ -318,33 +318,5 @@ footer a:hover {
   th {
     font-size: 0.75rem !important;
   }
-  // ==========================================
-// ИСКЛЮЧЕНИЕ ДЛЯ СТРАНИЦЫ "ПРАВИЛА"
-// ==========================================
-
-// Убираем градиент у заголовков на странице правил
-// Определяем по ссылке в URL через :has()
-article h1:not(.article-title),
-article h2,
-article h3 {
-  /* по умолчанию — градиент (уже задан выше) */
-}
-
-// Исключение: если в заголовке статьи есть слово "Правила" или "Аккаунты и честная игра"
-article h2#1-аккаунты-и-честная-игра ~ h2,
-article h2#1-аккаунты-и-честная-игра,
-article h2#2-производительность-сервера,
-article h2#3-имущество-и-территории,
-article h2#4-торговля-и-сделки,
-article h2#5-контент-и-внешний-вид,
-article h2#6-штрафы,
-article h2#7-жалобы-и-администрация,
-article h2#8-возраст-и-допуск {
-  background: none !important;
-  -webkit-background-clip: initial !important;
-  -webkit-text-fill-color: #d4d4d4 !important;
-  background-clip: initial !important;
-  color: #d4d4d4 !important;
-  text-shadow: none !important;
-}
+ 
 }
