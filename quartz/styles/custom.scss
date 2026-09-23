@@ -131,6 +131,7 @@ body:not([data-slug="admin-commands"]) article > ul > li {
   position: relative !important;
   overflow: hidden !important;
   text-align: center !important;
+  cursor: pointer !important;
 }
 
 body:not([data-slug="admin-commands"]) article > ul > li::before {
@@ -157,15 +158,12 @@ body:not([data-slug="admin-commands"]) article > ul > li:hover::before {
   opacity: 1 !important;
 }
 
-// Убираем маленький прямоугольник — все ссылки внутри карточки
-body:not([data-slug="admin-commands"]) article > ul > li a,
-body:not([data-slug="admin-commands"]) article > ul > li a.internal,
-body:not([data-slug="admin-commands"]) article > ul > li a.internal:hover,
-body:not([data-slug="admin-commands"]) article > ul > li p a,
-body:not([data-slug="admin-commands"]) article > ul > li span a {
+// Ссылка растягивается на всю карточку
+body:not([data-slug="admin-commands"]) article > ul > li > a,
+body:not([data-slug="admin-commands"]) article > ul > li a {
   color: #d4d4d4 !important;
   font-weight: 600 !important;
-  font-size: 1.25rem !important;
+  font-size: 1.2rem !important;
   text-decoration: none !important;
   padding: 0 !important;
   margin: 0 !important;
@@ -176,20 +174,30 @@ body:not([data-slug="admin-commands"]) article > ul > li span a {
   border-radius: 0 !important;
   box-shadow: none !important;
   transition: color 0.2s ease !important;
-  position: relative !important;
-  z-index: 2 !important;
   text-align: center !important;
+
+  /* Растягиваем ссылку на всю карточку */
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
   width: 100% !important;
+  height: 100% !important;
+
+  /* Центрируем текст */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  z-index: 2 !important;
 }
 
-body:not([data-slug="admin-commands"]) article > ul > li a:hover,
-body:not([data-slug="admin-commands"]) article > ul > li a.internal:hover {
+body:not([data-slug="admin-commands"]) article > ul > li > a:hover,
+body:not([data-slug="admin-commands"]) article > ul > li a:hover {
   color: #49AAFF !important;
   background: none !important;
   background-color: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  padding: 0 !important;
 }
 // ==========================================
 // 7. СТРАНИЦА АДМИН-КОМАНД (БЕЗ КАРТОЧЕК)
