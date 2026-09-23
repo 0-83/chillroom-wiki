@@ -157,15 +157,21 @@ body:not([data-slug="admin-commands"]) article > ul > li:hover::before {
   opacity: 1 !important;
 }
 
-body:not([data-slug="admin-commands"]) article > ul > li > a {
+// Убираем маленький прямоугольник — все ссылки внутри карточки
+body:not([data-slug="admin-commands"]) article > ul > li a,
+body:not([data-slug="admin-commands"]) article > ul > li a.internal,
+body:not([data-slug="admin-commands"]) article > ul > li a.internal:hover,
+body:not([data-slug="admin-commands"]) article > ul > li p a,
+body:not([data-slug="admin-commands"]) article > ul > li span a {
   color: #d4d4d4 !important;
   font-weight: 600 !important;
-  font-size: 1.2rem !important;
+  font-size: 1.25rem !important;
   text-decoration: none !important;
   padding: 0 !important;
   margin: 0 !important;
   display: block !important;
   background: none !important;
+  background-color: transparent !important;
   border: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
@@ -173,15 +179,18 @@ body:not([data-slug="admin-commands"]) article > ul > li > a {
   position: relative !important;
   z-index: 2 !important;
   text-align: center !important;
+  width: 100% !important;
 }
 
-body:not([data-slug="admin-commands"]) article > ul > li > a:hover {
+body:not([data-slug="admin-commands"]) article > ul > li a:hover,
+body:not([data-slug="admin-commands"]) article > ul > li a.internal:hover {
   color: #49AAFF !important;
   background: none !important;
+  background-color: transparent !important;
   border: none !important;
   box-shadow: none !important;
+  padding: 0 !important;
 }
-
 // ==========================================
 // 7. СТРАНИЦА АДМИН-КОМАНД (БЕЗ КАРТОЧЕК)
 // ==========================================
