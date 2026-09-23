@@ -123,13 +123,14 @@ body:not([data-slug="admin-commands"]) article > ul > li {
   -webkit-backdrop-filter: blur(8px) !important;
   border: 1px solid rgba(73, 170, 255, 0.2) !important;
   border-radius: 12px !important;
-  padding: 1rem 1.5rem !important;
+  padding: 1.2rem 1.5rem !important;
   margin: 0 !important;
   list-style: none !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
   transition: all 0.3s ease !important;
   position: relative !important;
   overflow: hidden !important;
+  text-align: center !important;
 }
 
 body:not([data-slug="admin-commands"]) article > ul > li::before {
@@ -159,20 +160,26 @@ body:not([data-slug="admin-commands"]) article > ul > li:hover::before {
 body:not([data-slug="admin-commands"]) article > ul > li > a {
   color: #d4d4d4 !important;
   font-weight: 600 !important;
-  font-size: 1.05rem !important;
+  font-size: 1.2rem !important;
   text-decoration: none !important;
   padding: 0 !important;
+  margin: 0 !important;
   display: block !important;
-  background: transparent !important;
+  background: none !important;
   border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
   transition: color 0.2s ease !important;
   position: relative !important;
   z-index: 2 !important;
+  text-align: center !important;
 }
 
 body:not([data-slug="admin-commands"]) article > ul > li > a:hover {
   color: #49AAFF !important;
-  background: transparent !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 // ==========================================
