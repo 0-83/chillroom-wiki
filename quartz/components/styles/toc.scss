@@ -31,14 +31,29 @@ button#toc {
   max-height: none;
   transition: max-height 0.5s ease;
 
-  &.collapsed > .overflow::after {
-    opacity: 0;
+  // УБИРАЕМ ЧЁРНУЮ ПОЛОСУ ПОД ОГЛАВЛЕНИЕМ
+  & > .overflow::after {
+    display: none !important;
+    content: none !important;
+    background: none !important;
+    height: 0 !important;
+    opacity: 0 !important;
   }
 
   & ul {
     list-style: none;
     margin: 0.5rem 0;
     padding: 0;
+
+    // УБИРАЕМ ПОЛОСУ И У САМИХ СПИСКОВ
+    &::after {
+      display: none !important;
+      content: none !important;
+      background: none !important;
+      height: 0 !important;
+      opacity: 0 !important;
+    }
+
     & > li > a {
       color: var(--dark);
       opacity: 0.35;
