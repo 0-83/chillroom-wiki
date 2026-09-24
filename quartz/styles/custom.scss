@@ -342,5 +342,20 @@ footer a:hover {
   th {
     font-size: 0.75rem !important;
   }
- 
+  
+  ul.overflow::after,
+  ol.overflow::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  height: 0 !important;
+  opacity: 0 !important;
+ }
+
+  ul.overflow,
+  ol.overflow {
+  max-height: none !important;
+  height: auto !important;
+  overflow-y: visible !important;
+ } 
 }
