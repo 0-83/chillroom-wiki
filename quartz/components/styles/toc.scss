@@ -31,7 +31,6 @@ button#toc {
   max-height: none;
   transition: max-height 0.5s ease;
 
-  // УБИРАЕМ ЧЁРНУЮ ПОЛОСУ ПОД ОГЛАВЛЕНИЕМ
   & > .overflow::after {
     display: none !important;
     content: none !important;
@@ -45,7 +44,6 @@ button#toc {
     margin: 0.5rem 0;
     padding: 0;
 
-    // УБИРАЕМ ПОЛОСУ И У САМИХ СПИСКОВ
     &::after {
       display: none !important;
       content: none !important;
