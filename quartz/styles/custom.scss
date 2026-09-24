@@ -343,12 +343,28 @@ footer a:hover {
     font-size: 0.75rem !important;
   }
   
-   .page > #quartz-body .sidebar.left,
-   .page > #quartz-body .sidebar.right {
-   background: transparent !important;
-   background-color: transparent !important;
-   backdrop-filter: none !important;
-   -webkit-backdrop-filter: none !important;
-   box-shadow: none !important;
-  }
+.page > #quartz-body .sidebar,
+.page > #quartz-body .sidebar.left,
+.page > #quartz-body .sidebar.right {
+  background: transparent !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+ul.overflow::after,
+ol.overflow::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  height: 0 !important;
+  opacity: 0 !important;
+}
+
+.page > #quartz-body .sidebar.left,
+.page > #quartz-body .sidebar.right {
+  height: auto !important;
+  max-height: fit-content !important;
+}
 }
