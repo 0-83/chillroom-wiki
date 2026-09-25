@@ -1,6 +1,6 @@
-// ==========================================
-// 1. ФОН
-// ==========================================
+/* ==========================================
+   1. ФОН
+   ========================================== */
 
 body {
   background-color: #0d1117;
@@ -8,12 +8,25 @@ body {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  color: #d4d4d4 !important;
+  color: #ffffff !important;
 }
 
-// ==========================================
-// 2. УБИРАЕМ ЛИШНИЕ ФОНЫ И РАМКИ
-// ==========================================
+/* ==========================================
+   1.1. ГЛОБАЛЬНЫЙ БЕЛЫЙ ТЕКСТ + ОБВОДКА
+   ========================================== */
+
+body,
+body *:not(svg):not(path):not(img):not(video):not(canvas) {
+  color: #ffffff !important;
+  text-shadow:
+    0 0 2px rgba(0, 0, 0, 0.9),
+    0 0 4px rgba(0, 0, 0, 0.7),
+    0 1px 2px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* ==========================================
+   2. УБИРАЕМ ЛИШНИЕ ФОНЫ И РАМКИ
+   ========================================== */
 
 article,
 .sidebar,
@@ -42,17 +55,17 @@ hr {
   display: none !important;
 }
 
-// ==========================================
-// 3. СКРЫВАЕМ СТАРЫЙ ЗАГОЛОВОК ("index")
-// ==========================================
+/* ==========================================
+   3. СКРЫВАЕМ СТАРЫЙ ЗАГОЛОВОК ("index")
+   ========================================== */
 
 h1.article-title {
   display: none !important;
 }
 
-// ==========================================
-// 4. ЗАГОЛОВОК + ДАТА ПОД НИМ
-// ==========================================
+/* ==========================================
+   4. ЗАГОЛОВОК + ДАТА ПОД НИМ
+   ========================================== */
 
 .page-header .popover-hint {
   display: flex !important;
@@ -63,13 +76,14 @@ h1.article-title {
   order: 1 !important;
   margin-top: 0 !important;
   margin-bottom: 0.3rem !important;
-  color: rgba(255, 255, 255, 0.4) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
   font-size: 0.85rem !important;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.9) !important;
 }
 
-// ==========================================
-// 5. ВСЕ ЗАГОЛОВКИ (ГРАДИЕНТ #49AAFF → #428BE4)
-// ==========================================
+/* ==========================================
+   5. ВСЕ ЗАГОЛОВКИ (ГРАДИЕНТ #49AAFF → #428BE4)
+   ========================================== */
 
 h1:not(.article-title),
 h2,
@@ -87,6 +101,8 @@ h3 {
   margin-top: 2rem !important;
   margin-bottom: 1.5rem !important;
   display: block !important;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.95))
+          drop-shadow(0 0 6px rgba(0, 0, 0, 0.7)) !important;
 }
 
 h1:not(.article-title)::after,
@@ -104,9 +120,9 @@ h3::after {
   opacity: 0.8 !important;
 }
 
-// ==========================================
-// 6. КАРТОЧКИ (КРОМЕ СТРАНИЦЫ АДМИН-КОМАНД)
-// ==========================================
+/* ==========================================
+   6. КАРТОЧКИ (КРОМЕ СТРАНИЦЫ АДМИН-КОМАНД)
+   ========================================== */
 
 body:not([data-slug="admin-commands"]) article > ul {
   display: grid !important;
@@ -168,10 +184,11 @@ body:not([data-slug="admin-commands"]) article > ul > li a {
   padding: 0 !important;
   margin: 0 !important;
   box-shadow: none !important;
-  color: #d4d4d4 !important;
+  color: #ffffff !important;
   font-weight: 600 !important;
   font-size: 1.1rem !important;
   text-decoration: none !important;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.95), 0 0 6px rgba(0, 0, 0, 0.7) !important;
 }
 
 body:not([data-slug="admin-commands"]) article > ul > li a.internal:hover,
@@ -187,6 +204,7 @@ body:not([data-slug="admin-commands"]) article > ul > li strong {
   padding: 0 !important;
   margin: 0 !important;
   font-weight: 600 !important;
+  color: #ffffff !important;
 }
 
 body:not([data-slug="admin-commands"]) article > ul > li a.internal::after,
@@ -199,9 +217,10 @@ body:not([data-slug="admin-commands"]) article > ul > li strong a::after {
   height: 100% !important;
   z-index: 1 !important;
 }
-// ==========================================
-// 7. СТРАНИЦА АДМИН-КОМАНД (БЕЗ КАРТОЧЕК)
-// ==========================================
+
+/* ==========================================
+   7. СТРАНИЦА АДМИН-КОМАНД (БЕЗ КАРТОЧЕК)
+   ========================================== */
 
 body[data-slug="admin-commands"] article ul {
   display: block !important;
@@ -218,6 +237,7 @@ body[data-slug="admin-commands"] article li {
   padding: 0.3rem 0 !important;
   margin: 0 !important;
   list-style: none !important;
+  color: #ffffff !important;
 }
 
 body[data-slug="admin-commands"] article li::before {
@@ -232,6 +252,7 @@ body[data-slug="admin-commands"] article code {
   color: #49AAFF !important;
   font-weight: 600 !important;
   font-size: 0.95rem !important;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.95), 0 0 6px rgba(0, 0, 0, 0.7) !important;
 }
 
 body[data-slug="admin-commands"] article pre {
@@ -246,12 +267,13 @@ body[data-slug="admin-commands"] article pre > code {
   background: transparent !important;
   border: none !important;
   padding: 0 !important;
-  color: #d4d4d4 !important;
+  color: #ffffff !important;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.95), 0 0 6px rgba(0, 0, 0, 0.7) !important;
 }
 
-// ==========================================
-// 8. ЗАГОЛОВОК В САЙДБАРЕ
-// ==========================================
+/* ==========================================
+   8. ЗАГОЛОВОК В САЙДБАРЕ
+   ========================================== */
 
 .page-title a {
   font-size: 1.6rem !important;
@@ -261,32 +283,35 @@ body[data-slug="admin-commands"] article pre > code {
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
   text-shadow: none !important;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.95))
+          drop-shadow(0 0 6px rgba(0, 0, 0, 0.7)) !important;
 }
 
-// ==========================================
-// 9. ПОИСК
-// ==========================================
+/* ==========================================
+   9. ПОИСК
+   ========================================== */
 
 .search > #search-icon {
   background: rgba(255, 255, 255, 0.05) !important;
   border: 1px solid rgba(73, 170, 255, 0.15) !important;
   border-radius: 8px !important;
   backdrop-filter: blur(4px);
-  color: #d4d4d4;
+  color: #ffffff !important;
 }
 
-// ==========================================
-// 10. ФУТЕР
-// ==========================================
+/* ==========================================
+   10. ФУТЕР
+   ========================================== */
 
 footer {
   text-align: center;
-  opacity: 0.4;
+  opacity: 0.7;
   font-size: 0.8rem;
   padding: 2rem 0 !important;
   background: transparent !important;
   border: none !important;
   backdrop-filter: none !important;
+  color: #ffffff !important;
 }
 
 footer hr {
@@ -295,20 +320,22 @@ footer hr {
 
 footer p {
   margin: 0 !important;
+  color: #ffffff !important;
 }
 
 footer a {
   color: #49AAFF !important;
   text-decoration: none !important;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.95), 0 0 6px rgba(0, 0, 0, 0.7) !important;
 }
 
 footer a:hover {
   color: #428BE4 !important;
 }
 
-// ==========================================
-// 11. МОБИЛЬНАЯ АДАПТАЦИЯ
-// ==========================================
+/* ==========================================
+   11. МОБИЛЬНАЯ АДАПТАЦИЯ
+   ========================================== */
 
 @media all and (max-width: 768px) {
   h1:not(.article-title),
@@ -337,34 +364,36 @@ footer a:hover {
     white-space: nowrap !important;
     padding: 0.4rem 0.8rem !important;
     font-size: 0.8rem !important;
+    color: #ffffff !important;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.95), 0 0 6px rgba(0, 0, 0, 0.7) !important;
   }
 
   th {
     font-size: 0.75rem !important;
   }
-  
-.page > #quartz-body .sidebar,
-.page > #quartz-body .sidebar.left,
-.page > #quartz-body .sidebar.right {
-  background: transparent !important;
-  background-color: transparent !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  box-shadow: none !important;
-}
 
-ul.overflow::after,
-ol.overflow::after {
-  display: none !important;
-  content: none !important;
-  background: none !important;
-  height: 0 !important;
-  opacity: 0 !important;
-}
+  .page > #quartz-body .sidebar,
+  .page > #quartz-body .sidebar.left,
+  .page > #quartz-body .sidebar.right {
+    background: transparent !important;
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+  }
 
-.page > #quartz-body .sidebar.left,
-.page > #quartz-body .sidebar.right {
-  height: auto !important;
-  max-height: fit-content !important;
-}
+  ul.overflow::after,
+  ol.overflow::after {
+    display: none !important;
+    content: none !important;
+    background: none !important;
+    height: 0 !important;
+    opacity: 0 !important;
+  }
+
+  .page > #quartz-body .sidebar.left,
+  .page > #quartz-body .sidebar.right {
+    height: auto !important;
+    max-height: fit-content !important;
+  }
 }
