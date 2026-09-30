@@ -78,7 +78,7 @@ h1.article-title {
 }
 
 /* ==========================================
-   5. ВСЕ ЗАГОЛОВКИ (ГРАДИЕНТ #49AAFF → #428BE4)
+   5. ВСЕ ЗАГОЛОВКИ (МОЛОЧНЫЕ, ПОЛОСКА ГОЛУБАЯ)
    ========================================== */
 
 h1:not(.article-title),
@@ -87,18 +87,17 @@ h3 {
   position: relative !important;
   font-size: 1.8rem !important;
   font-weight: 700 !important;
-  background: linear-gradient(135deg, #49AAFF 0%, #428BE4 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-  text-shadow: none !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #f0e9dd !important;
+  background-clip: initial !important;
+  color: #f0e9dd !important;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.95), 0 0 6px rgba(0, 0, 0, 0.7) !important;
   border-bottom: none !important;
   padding-bottom: 0.5rem !important;
   margin-top: 2rem !important;
   margin-bottom: 1.5rem !important;
   display: block !important;
-  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.95))
-          drop-shadow(0 0 3px rgba(0, 0, 0, 0.7)) !important;
 }
 
 h1:not(.article-title)::after,
@@ -268,17 +267,18 @@ body[data-slug="admin-commands"] article pre > code {
 }
 
 /* ==========================================
-   8. ЗАГОЛОВОК В САЙДБАРЕ
+   8. ЗАГОЛОВОК В САЙДБАРЕ (МОЛОЧНЫЙ)
    ========================================== */
 
 .page-title a {
   font-size: 1.6rem !important;
   font-weight: 700 !important;
-  background: linear-gradient(135deg, #49AAFF 0%, #428BE4 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-  text-shadow: none !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #f0e9dd !important;
+  background-clip: initial !important;
+  color: #f0e9dd !important;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.95), 0 0 6px rgba(0, 0, 0, 0.7) !important;
 }
 
 /* ==========================================
@@ -328,7 +328,31 @@ footer a:hover {
 }
 
 /* ==========================================
-   11. МОБИЛЬНАЯ АДАПТАЦИЯ
+   11. ЦВЕТА РЕДКОСТИ ЗАЧАРОВАНИЙ
+   ========================================== */
+
+.rarity-common {
+  color: #a8a8a8 !important;
+}
+
+.rarity-rare {
+  color: #6976ec !important;
+  font-weight: 600 !important;
+}
+
+.rarity-epic {
+  color: #fc54fc !important;
+  font-weight: 600 !important;
+}
+
+.rarity-legendary {
+  color: #e9b992 !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 6px rgba(233, 185, 146, 0.4) !important;
+}
+
+/* ==========================================
+   12. МОБИЛЬНАЯ АДАПТАЦИЯ
    ========================================== */
 
 @media all and (max-width: 768px) {
@@ -391,26 +415,24 @@ footer a:hover {
     max-height: fit-content !important;
   }
    /* ==========================================
-   ЦВЕТА РЕДКОСТИ ЗАЧАРОВАНИЙ
+   13. УБИРАЕМ ЗАГОЛОВКИ В САЙДБАРЕ
    ========================================== */
 
-.rarity-common {
-  color: #a8a8a8 !important;
+button#toc h3,
+#toc h3,
+.toc h3 {
+  display: none !important;
 }
 
-.rarity-rare {
-  color: #6976ec !important;
-  font-weight: 600 !important;
+.toc.desktop-only,
+.toc {
+  display: none !important;
 }
 
-.rarity-epic {
-  color: #fc54fc !important;
-  font-weight: 600 !important;
-}
-
-.rarity-legendary {
-  color: #e9b992 !important;
-  font-weight: 700 !important;
-  text-shadow: 0 0 6px rgba(233, 185, 146, 0.4) !important;
+#toc-content,
+#toc-content ul,
+#toc-content li,
+#toc-content a {
+  display: none !important;
 }
 }
