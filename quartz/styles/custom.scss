@@ -454,50 +454,35 @@ button#toc h3,
     max-height: fit-content !important;
   }
    /* ==========================================
-   14. ПРЯМОУГОЛЬНИКИ С ИНФОРМАЦИЕЙ
+   14. УБИРАЕМ ПРЯМОУГОЛЬНИКИ У СПИСКОВ
    ========================================== */
 
-article > div,
-article > section,
-article > aside,
-article > blockquote,
-article > .callout,
-article > .admonition {
+article ul,
+article ol,
+article ul li,
+article ol li {
   background: transparent !important;
   background-color: transparent !important;
   border: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0.5rem 0 !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
 }
 
-article table,
-article th,
-article td {
-  background: transparent !important;
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-}
 
-article p:has(code),
-article p:has(> code) {
-  background: transparent !important;
-  background-color: transparent !important;
-  border: none !important;
-  padding: 0 !important;
-  margin: 0.3rem 0 !important;
-}
-
-article p {
-  background: transparent !important;
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
+article ul,
+article ol {
+  padding-left: 1.5rem !important;
   margin: 0.5rem 0 !important;
+  list-style: disc !important;
+}
+
+
+article ul li,
+article ol li {
+  padding: 0.2rem 0 !important;
+  margin: 0 !important;
+  list-style: inherit !important;
 }
 }
