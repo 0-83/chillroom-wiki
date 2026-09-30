@@ -8,16 +8,16 @@ body {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  color: #ffffff !important;
+  color: #f0e9dd !important;
 }
 
 /* ==========================================
-   1.1. ГЛОБАЛЬНЫЙ БЕЛЫЙ ТЕКСТ + ОБВОДКА
+   1.1. ГЛОБАЛЬНЫЙ МОЛОЧНЫЙ ТЕКСТ + ОБВОДКА
    ========================================== */
 
 body,
 body *:not(svg):not(path):not(img):not(video):not(canvas) {
-  color: #ffffff !important;
+  color: #f0e9dd !important;
 }
 
 /* ==========================================
@@ -72,7 +72,7 @@ h1.article-title {
   order: 1 !important;
   margin-top: 0 !important;
   margin-bottom: 0.3rem !important;
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(240, 233, 221, 0.7) !important;
   font-size: 0.85rem !important;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.9) !important;
 }
@@ -97,9 +97,8 @@ h3 {
   margin-top: 2rem !important;
   margin-bottom: 1.5rem !important;
   display: block !important;
-   filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.95))
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.95))
           drop-shadow(0 0 3px rgba(0, 0, 0, 0.7)) !important;
-  
 }
 
 h1:not(.article-title)::after,
@@ -181,7 +180,7 @@ body:not([data-slug="admin-commands"]) article > ul > li a {
   padding: 0 !important;
   margin: 0 !important;
   box-shadow: none !important;
-  color: #ffffff !important;
+  color: #f0e9dd !important;
   font-weight: 600 !important;
   font-size: 1.1rem !important;
   text-decoration: none !important;
@@ -201,7 +200,7 @@ body:not([data-slug="admin-commands"]) article > ul > li strong {
   padding: 0 !important;
   margin: 0 !important;
   font-weight: 600 !important;
-  color: #ffffff !important;
+  color: #f0e9dd !important;
 }
 
 body:not([data-slug="admin-commands"]) article > ul > li a.internal::after,
@@ -234,7 +233,7 @@ body[data-slug="admin-commands"] article li {
   padding: 0.3rem 0 !important;
   margin: 0 !important;
   list-style: none !important;
-  color: #ffffff !important;
+  color: #f0e9dd !important;
 }
 
 body[data-slug="admin-commands"] article li::before {
@@ -264,7 +263,7 @@ body[data-slug="admin-commands"] article pre > code {
   background: transparent !important;
   border: none !important;
   padding: 0 !important;
-  color: #ffffff !important;
+  color: #f0e9dd !important;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.95), 0 0 6px rgba(0, 0, 0, 0.7) !important;
 }
 
@@ -280,7 +279,6 @@ body[data-slug="admin-commands"] article pre > code {
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
   text-shadow: none !important;
-  
 }
 
 /* ==========================================
@@ -292,7 +290,7 @@ body[data-slug="admin-commands"] article pre > code {
   border: 1px solid rgba(73, 170, 255, 0.15) !important;
   border-radius: 8px !important;
   backdrop-filter: blur(4px);
-  color: #ffffff !important;
+  color: #f0e9dd !important;
 }
 
 /* ==========================================
@@ -307,7 +305,7 @@ footer {
   background: transparent !important;
   border: none !important;
   backdrop-filter: none !important;
-  color: #ffffff !important;
+  color: #f0e9dd !important;
 }
 
 footer hr {
@@ -316,7 +314,7 @@ footer hr {
 
 footer p {
   margin: 0 !important;
-  color: #ffffff !important;
+  color: #f0e9dd !important;
 }
 
 footer a {
@@ -360,7 +358,7 @@ footer a:hover {
     white-space: nowrap !important;
     padding: 0.4rem 0.8rem !important;
     font-size: 0.8rem !important;
-    color: #ffffff !important;
+    color: #f0e9dd !important;
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.95), 0 0 6px rgba(0, 0, 0, 0.7) !important;
   }
 
