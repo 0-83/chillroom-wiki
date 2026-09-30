@@ -390,4 +390,27 @@ footer a:hover {
     height: auto !important;
     max-height: fit-content !important;
   }
+   /* ==========================================
+   ЦВЕТА РЕДКОСТИ ЗАЧАРОВАНИЙ
+   ========================================== */
+
+.rarity-common {
+  color: #a8a8a8 !important;
+}
+
+.rarity-rare {
+  color: #6976ec !important;
+  font-weight: 600 !important;
+}
+
+.rarity-epic {
+  color: #fc54fc !important;
+  font-weight: 600 !important;
+}
+
+.rarity-legendary {
+  color: #e9b992 !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 6px rgba(233, 185, 146, 0.4) !important;
+}
 }
