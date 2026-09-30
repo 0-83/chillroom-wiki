@@ -10,6 +10,25 @@ body {
   background-attachment: fixed;
   color: #f0e9dd !important;
 }
+
+/* ==========================================
+   1.1. ГЛОБАЛЬНЫЙ МОЛОЧНЫЙ ТЕКСТ (БЕЗ ОБВОДКИ)
+   ========================================== */
+
+body,
+article,
+p,
+li,
+span,
+div,
+td,
+th,
+h1, h2, h3, h4, h5, h6,
+a, strong, em, i, b {
+  color: #f0e9dd !important;
+  -webkit-text-stroke: 0 !important;
+}
+
 /* ==========================================
    2. УБИРАЕМ ЛИШНИЕ ФОНЫ И РАМКИ
    ========================================== */
@@ -83,6 +102,7 @@ h3 {
   background-clip: initial !important;
   color: #f0e9dd !important;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.95), 0 0 6px rgba(0, 0, 0, 0.7) !important;
+  -webkit-text-stroke: 0 !important;
   border-bottom: none !important;
   padding-bottom: 0.5rem !important;
   margin-top: 2rem !important;
@@ -103,6 +123,38 @@ h3::after {
   background: linear-gradient(90deg, #49AAFF 0%, #428BE4 100%) !important;
   border-radius: 2px !important;
   opacity: 0.8 !important;
+}
+
+/* ==========================================
+   5.1. УБИРАЕМ ОБВОДКУ У КОДА И КОМАНД
+   ========================================== */
+
+code,
+pre,
+kbd,
+samp {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  color: #49AAFF !important;
+  font-weight: 600 !important;
+  -webkit-text-stroke: 0 !important;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.95), 0 0 6px rgba(0, 0, 0, 0.7) !important;
+}
+
+pre > code {
+  color: #f0e9dd !important;
+}
+
+/* Убираем фон и рамки у блоков кода внутри pre */
+pre {
+  padding: 0 !important;
+  overflow-x: visible !important;
 }
 
 /* ==========================================
@@ -230,32 +282,6 @@ body[data-slug="admin-commands"] article li::before {
   content: none !important;
 }
 
-body[data-slug="admin-commands"] article code {
-  background: transparent !important;
-  border: none !important;
-  padding: 0 !important;
-  color: #49AAFF !important;
-  font-weight: 600 !important;
-  font-size: 0.95rem !important;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.95), 0 0 6px rgba(0, 0, 0, 0.7) !important;
-}
-
-body[data-slug="admin-commands"] article pre {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0.5rem 0 !important;
-}
-
-body[data-slug="admin-commands"] article pre > code {
-  background: transparent !important;
-  border: none !important;
-  padding: 0 !important;
-  color: #f0e9dd !important;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.95), 0 0 6px rgba(0, 0, 0, 0.7) !important;
-}
-
 /* ==========================================
    8. ЗАГОЛОВОК В САЙДБАРЕ (МОЛОЧНЫЙ)
    ========================================== */
@@ -269,6 +295,7 @@ body[data-slug="admin-commands"] article pre > code {
   background-clip: initial !important;
   color: #f0e9dd !important;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.95), 0 0 6px rgba(0, 0, 0, 0.7) !important;
+  -webkit-text-stroke: 0 !important;
 }
 
 /* ==========================================
@@ -342,7 +369,29 @@ footer a:hover {
 }
 
 /* ==========================================
-   12. МОБИЛЬНАЯ АДАПТАЦИЯ
+   12. УБИРАЕМ ОГЛАВЛЕНИЕ В САЙДБАРЕ
+   ========================================== */
+
+button#toc h3,
+#toc h3,
+.toc h3 {
+  display: none !important;
+}
+
+.toc.desktop-only,
+.toc {
+  display: none !important;
+}
+
+#toc-content,
+#toc-content ul,
+#toc-content li,
+#toc-content a {
+  display: none !important;
+}
+
+/* ==========================================
+   13. МОБИЛЬНАЯ АДАПТАЦИЯ
    ========================================== */
 
 @media all and (max-width: 768px) {
@@ -404,25 +453,4 @@ footer a:hover {
     height: auto !important;
     max-height: fit-content !important;
   }
-   /* ==========================================
-   13. УБИРАЕМ ЗАГОЛОВКИ В САЙДБАРЕ
-   ========================================== */
-
-button#toc h3,
-#toc h3,
-.toc h3 {
-  display: none !important;
-}
-
-.toc.desktop-only,
-.toc {
-  display: none !important;
-}
-
-#toc-content,
-#toc-content ul,
-#toc-content li,
-#toc-content a {
-  display: none !important;
-}
 }
