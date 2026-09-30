@@ -158,10 +158,11 @@ pre {
 }
 
 /* ==========================================
-   6. КАРТОЧКИ (КРОМЕ СТРАНИЦЫ АДМИН-КОМАНД)
+   6. КАРТОЧКИ (ТОЛЬКО НА ГЛАВНОЙ)
    ========================================== */
 
-body:not([data-slug="admin-commands"]) article > ul {
+/* Карточки — только на главной странице */
+body[data-slug="index"] article > ul {
   display: grid !important;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
   gap: 0.8rem !important;
@@ -170,7 +171,7 @@ body:not([data-slug="admin-commands"]) article > ul {
   list-style: none !important;
 }
 
-body:not([data-slug="admin-commands"]) article > ul > li {
+body[data-slug="index"] article > ul > li {
   background: rgba(0, 60, 90, 0.35) !important;
   backdrop-filter: blur(8px) !important;
   -webkit-backdrop-filter: blur(8px) !important;
@@ -187,7 +188,7 @@ body:not([data-slug="admin-commands"]) article > ul > li {
   cursor: pointer !important;
 }
 
-body:not([data-slug="admin-commands"]) article > ul > li::before {
+body[data-slug="index"] article > ul > li::before {
   content: '' !important;
   display: block !important;
   position: absolute !important;
@@ -197,62 +198,47 @@ body:not([data-slug="admin-commands"]) article > ul > li::before {
   height: 4px !important;
   background: linear-gradient(90deg, #49AAFF 0%, #428BE4 100%) !important;
   opacity: 0.5 !important;
-  transition: opacity 0.3s ease !important;
 }
 
-body:not([data-slug="admin-commands"]) article > ul > li:hover {
+body[data-slug="index"] article > ul > li:hover {
   transform: translateY(-3px) !important;
   background: rgba(0, 80, 110, 0.5) !important;
   border-color: rgba(73, 170, 255, 0.4) !important;
   box-shadow: 0 6px 20px rgba(73, 170, 255, 0.2) !important;
 }
 
-body:not([data-slug="admin-commands"]) article > ul > li:hover::before {
+body[data-slug="index"] article > ul > li:hover::before {
   opacity: 1 !important;
 }
 
-body:not([data-slug="admin-commands"]) article > ul > li a.internal,
-body:not([data-slug="admin-commands"]) article > ul > li strong a,
-body:not([data-slug="admin-commands"]) article > ul > li a {
-  background-color: transparent !important;
-  background: none !important;
-  border: none !important;
-  border-radius: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  box-shadow: none !important;
+body[data-slug="index"] article > ul > li a {
   color: #f0e9dd !important;
   font-weight: 600 !important;
   font-size: 1.1rem !important;
   text-decoration: none !important;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.95), 0 0 6px rgba(0, 0, 0, 0.7) !important;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.95) !important;
 }
 
-body:not([data-slug="admin-commands"]) article > ul > li a.internal:hover,
-body:not([data-slug="admin-commands"]) article > ul > li strong a:hover {
-  color: #49AAFF !important;
-  background-color: transparent !important;
-  background: none !important;
-  padding: 0 !important;
+/* Все остальные страницы — обычные списки */
+body:not([data-slug="index"]) article ul,
+body:not([data-slug="index"]) article ol {
+  display: block !important;
+  padding-left: 1.5rem !important;
+  margin: 0.5rem 0 !important;
+  background: transparent !important;
+  border: none !important;
+  list-style: disc !important;
 }
 
-body:not([data-slug="admin-commands"]) article > ul > li strong {
-  background: none !important;
-  padding: 0 !important;
+body:not([data-slug="index"]) article ul li,
+body:not([data-slug="index"]) article ol li {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0.2rem 0 !important;
   margin: 0 !important;
-  font-weight: 600 !important;
-  color: #f0e9dd !important;
-}
-
-body:not([data-slug="admin-commands"]) article > ul > li a.internal::after,
-body:not([data-slug="admin-commands"]) article > ul > li strong a::after {
-  content: '' !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  z-index: 1 !important;
+  list-style: inherit !important;
 }
 
 /* ==========================================
@@ -453,36 +439,5 @@ button#toc h3,
     height: auto !important;
     max-height: fit-content !important;
   }
-   /* ==========================================
-   14. УБИРАЕМ ПРЯМОУГОЛЬНИКИ У СПИСКОВ
-   ========================================== */
-
-article ul,
-article ol,
-article ul li,
-article ol li {
-  background: transparent !important;
-  background-color: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-
-
-article ul,
-article ol {
-  padding-left: 1.5rem !important;
-  margin: 0.5rem 0 !important;
-  list-style: disc !important;
-}
-
-
-article ul li,
-article ol li {
-  padding: 0.2rem 0 !important;
-  margin: 0 !important;
-  list-style: inherit !important;
-}
+  
 }
