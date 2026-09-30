@@ -331,27 +331,40 @@ footer a:hover {
 }
 
 /* ==========================================
-   11. ЦВЕТА РЕДКОСТИ ЗАЧАРОВАНИЙ
+   11. ЦВЕТА РЕДКОСТИ ЗАЧАРОВАНИЙ (ЯРКИЕ)
    ========================================== */
 
 .rarity-common {
-  color: #a8a8a8 !important;
+  color: #d4d4d4 !important;
+  font-weight: 700 !important;
+  text-shadow: 
+    0 0 4px rgba(0, 0, 0, 1),
+    0 0 8px rgba(0, 0, 0, 0.8) !important;
 }
 
 .rarity-rare {
-  color: #6976ec !important;
-  font-weight: 600 !important;
+  color: #8ba4ff !important;
+  font-weight: 700 !important;
+  text-shadow: 
+    0 0 4px rgba(0, 0, 0, 1),
+    0 0 8px rgba(0, 0, 0, 0.8) !important;
 }
 
 .rarity-epic {
-  color: #fc54fc !important;
-  font-weight: 600 !important;
+  color: #ff7bff !important;
+  font-weight: 700 !important;
+  text-shadow: 
+    0 0 4px rgba(0, 0, 0, 1),
+    0 0 8px rgba(0, 0, 0, 0.8) !important;
 }
 
 .rarity-legendary {
-  color: #e9b992 !important;
-  font-weight: 700 !important;
-  text-shadow: 0 0 6px rgba(233, 185, 146, 0.4) !important;
+  color: #ffcc80 !important;
+  font-weight: 800 !important;
+  text-shadow: 
+    0 0 4px rgba(0, 0, 0, 1),
+    0 0 8px rgba(0, 0, 0, 0.8),
+    0 0 12px rgba(255, 204, 128, 0.5) !important;
 }
 
 /* ==========================================
