@@ -439,5 +439,33 @@ button#toc h3,
     height: auto !important;
     max-height: fit-content !important;
   }
-  
+  /* ==========================================
+   15. ЧИТАЕМЫЕ НАЗВАНИЯ ЗАЧАРОВАНИЙ
+   ========================================== */
+
+table td:first-child {
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  color: #ffffff !important;
+  text-shadow: 
+    0 0 4px rgba(0, 0, 0, 1),
+    0 0 8px rgba(0, 0, 0, 0.8),
+    0 0 12px rgba(0, 0, 0, 0.6) !important;
+  letter-spacing: 0.02em !important;
+}
+
+table td span,
+table td font,
+table td .rarity-common,
+table td .rarity-rare,
+table td .rarity-epic,
+table td .rarity-legendary {
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  text-shadow: 
+    0 0 4px rgba(0, 0, 0, 1),
+    0 0 8px rgba(0, 0, 0, 0.8) !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
 }
