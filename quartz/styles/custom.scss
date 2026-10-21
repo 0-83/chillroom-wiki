@@ -161,7 +161,6 @@ pre {
    6. КАРТОЧКИ (ТОЛЬКО НА ГЛАВНОЙ)
    ========================================== */
 
-/* Карточки — только на главной странице */
 body[data-slug="index"] article > ul {
   display: grid !important;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
@@ -182,7 +181,7 @@ body[data-slug="index"] article > ul > li {
   list-style: none !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
   transition: all 0.3s ease !important;
-  position: relative !important;
+  position: relative !important; /* ВАЖНО ДЛЯ КЛИКА */
   overflow: hidden !important;
   text-align: center !important;
   cursor: pointer !important;
@@ -198,6 +197,7 @@ body[data-slug="index"] article > ul > li::before {
   height: 4px !important;
   background: linear-gradient(90deg, #49AAFF 0%, #428BE4 100%) !important;
   opacity: 0.5 !important;
+  transition: opacity 0.3s ease !important;
 }
 
 body[data-slug="index"] article > ul > li:hover {
@@ -211,36 +211,40 @@ body[data-slug="index"] article > ul > li:hover::before {
   opacity: 1 !important;
 }
 
+/* Ссылка внутри карточки */
 body[data-slug="index"] article > ul > li a {
+  background-color: transparent !important;
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
   color: #f0e9dd !important;
   font-weight: 600 !important;
   font-size: 1.1rem !important;
   text-decoration: none !important;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.95) !important;
-}
-
-/* Все остальные страницы — обычные списки */
-body:not([data-slug="index"]) article ul,
-body:not([data-slug="index"]) article ol {
   display: block !important;
-  padding-left: 1.5rem !important;
-  margin: 0.5rem 0 !important;
-  background: transparent !important;
-  border: none !important;
-  list-style: disc !important;
+  position: relative !important;
+  z-index: 2 !important;
 }
 
-body:not([data-slug="index"]) article ul li,
-body:not([data-slug="index"]) article ol li {
-  background: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  padding: 0.2rem 0 !important;
-  margin: 0 !important;
-  list-style: inherit !important;
+body[data-slug="index"] article > ul > li a:hover {
+  color: #49AAFF !important;
+  background: none !important;
 }
 
+/* РАСТЯГИВАЕМ ССЫЛКУ НА ВСЮ КАРТОЧКУ */
+body[data-slug="index"] article > ul > li a::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 1 !important;
+}
 /* ==========================================
    7. СТРАНИЦА АДМИН-КОМАНД (БЕЗ КАРТОЧЕК)
    ========================================== */
