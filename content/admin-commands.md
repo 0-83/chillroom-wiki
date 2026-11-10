@@ -3,28 +3,27 @@ title: Админские Команды
 search: false
 tags: []
 ---
-# 🔐 команды сервера
-## Игрок
-- `/inventoryrollback restore` - Просмотр истории инвентаря игрока
-- `/authme unregister <ник_игрока>` - удалить пароль
+# 🔐 Staff comands
+
+Охаёшечки любимый стаффчик ваш покорный слуга собрал гига увынскую пасту для помощи вам и мне (а вы кто я забыл) управлением сервера.
+Если же ты маленький негодник игрок нашел эту страницу на гидхабе можешь не волноваться прав на использования у тебя не будет.
+## Инвентарь игрока
+- `/irp restore`<игрок> - Просмотр истории инвентаря игрока
+- `/inv`<игрок> - инвентарь сейчас`/invec`<игрок> - эндерчест сейчас
+- `/offlinecheck`<игрок> - офлайн инвентарь, `/offlineecheck`<игрок> - офлайн эндерчест
+## Игровой аккаунт
+- `/authme unregister`<игрок> - удалить пароль
 - `/authme changepassword <ник_игрока> <новый_пароль>` - сменить пароль
-- `/invsee check` - инвентарь сейчас`/invsee echeck` - эндерчест сейчас
-- `/invsee offlineinv` - офлайн инвентарь
-- `/invsee offlineec` - офлайн эндерчест
-- `/lp user <игрок> permission set altdetector.exempt false` - ограничение на вход с одного айпи **ЭТО НЕ ИСПОЛЬЗОВАТЬ**
-- `/lp user player permission set authme.allowmultipleaccounts true` - ограничение на вход с одного айпи
+- `/lp user <игрок> permission set authme.allowmultipleaccounts true` - ограничение на вход с одного айпи
+- `/discord unlink`<игрок> - отвязать никнейм от аккаунта Discord
 ## Территория
 - `/co rollback r:1 t:4h`
 - `/co restore radius:1 time:3h action:container`
 ## Предметы и блоки
 - `/give @s minecraft:command_block[item_model="cr:void_shard"]`
 - `/give @s minecraft:iron_sword[minecraft:custom_model_data={strings:["perl"]}]`
-- `/execute align xyz run summon item_frame ~ ~ ~ {Facing:1b, Invisible:1b}` - невидимая рамка
-**Сущности**
-- `/data merge entity @e[type=!player,limit=1,sort=nearest] {Invulnerable:1b}` - сделать сущность на которую смотришь бессмертным. 
 ## Телепортация
 - `/execute in <измерение> run tp <игрок> <координаты>`
-
 ## LuckPerms
 - `/lp user <Ник> parent add <Группа>`
 - `/lp user <Ник> parent remove <Группа>`
@@ -38,4 +37,3 @@ tags: []
 - [Репозиторий2](https://oparisblue.github.io/minecraft-textures-viewer/#github/Foreck1/foreck-textures/main)
 - [Репозиторий3](https://oparisblue.github.io/minecraft-textures-viewer/#github/malcolmriley/unused-textures/master)
 - [Репозиторий 083](https://oparisblue.github.io/minecraft-textures-viewer/#github/0-83/image-library/main)
-
